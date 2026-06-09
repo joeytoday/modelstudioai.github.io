@@ -6,7 +6,7 @@ permalink: /skills/
 
 # 精选 Skills
 
-精选 Skills 是经过验证的高质量 AI 能力模块，覆盖图文、视频、文字三类场景。每个 Skill 运行时调用百炼 API。
+精选 Skills 是经过验证的高质量 AI 能力模块，覆盖图文、视频、文字三类场景。每个 Skill 运行时调用阿里云百炼 API。
 
 [获取 API Key →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
 
