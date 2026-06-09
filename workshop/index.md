@@ -1,78 +1,135 @@
 ---
-layout: page
+layout: doc
 title: Workshop
 permalink: /workshop/
 ---
 
-# 阿里云百炼 AI 生产力【实训营】
+# CLI & Skills 动手实验
 
-**一行指令，让 AI Agent 自动调度 10+ 模型与应用**
-
-观猹联合阿里云百炼，带你体验 AI Agent 自动调度 10+ 模型与应用能力的开发方式，构建你自己的 Agent Skills，与全球开发者一起探索新的开发范式。
+欢迎参加 Model Studio AI 线下 Workshop。本页是你的全程指引——按步骤操作即可。
 
 ---
 
-## 📍 活动信息
+## Step 1：获取百炼 API Key
 
-| | |
-|---|---|
-| **日期** | 2026 年 6 月 11 日（周四） |
-| **时间** | 13:30 — 17:30 |
-| **地点** | 杭州·云谷中心（浙江省杭州市西湖区灯彩街 1009 号） |
-| **人数** | 名额有限，仅限 120 人（审核制） |
+点击下方链接，注册/登录百炼平台并创建 API Key：
 
----
+👉 [获取 API Key](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
 
-## 🎡 活动内容
-
-### 1. 干货分享
-
-阿里云百炼 CLI 产品负责人现场讲透：如何一行指令，搞定文生图、视频、语音、RAG、搜索？
-
-### 2. 实战案例
-
-阿里云百炼开发者嘉宾带你看：Agent + 阿里云百炼 CLI 的完整项目是怎么跑起来的？
-
-### 3. 90 分钟 Workshop
-
-不是听课，是从零搭建一个完整作品！现场 tokens 管够，即学即用。
-
-### 4. 闪电路演
-
-做完就上台，5 分钟展示你的成果，路演即有奖。
+拿到 Key 后复制保存，下一步要用。
 
 ---
 
-## ✨ 重磅福利
+## Step 2：安装 OpenWork
 
-- 🎁 **路演奖励** — 完成路演即有奖，周边、惊喜奖品现场发！
-- 🎁 **开源贡献** — 优秀作品可向阿里云官方 GitHub 仓库（[modelstudioai/skills](https://github.com/modelstudioai/skills)）提交 PR，成功入选者将作为社区共建者，并额外获得专属证书。
-- 🎁 **社交媒体抽奖** — 现场发小红书 #阿里云百炼 #观猹 即可参与额外抽奖！
+OpenWork 桌面端已内置百炼 CLI，下载安装即可：
 
----
+👉 [下载 OpenWork](https://github.com/ModelStudioAI/openwork)
 
-## 🚀 现场准备
+<!-- TODO: 补充各系统的具体安装说明或直接链接到 release 页面 -->
 
-来之前请准备好：
-
-1. **笔记本电脑** — 建议带电源
-2. **Node.js >= 22.12** — [下载安装](https://nodejs.org)
-3. **API Key** — [免费获取](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
-4. **安装 CLI**：
-   ```bash
-   npm install -g bailian-cli
-   bl auth login --api-key sk-xxxxx
-   ```
+> 已安装过 OpenWork？请确认更新到最新版本。
 
 ---
 
-## 🔗 相关链接
+## Step 3：配置 API Key
 
-- [阿里云百炼 CLI](https://bailian.console.aliyun.com/cli?source_channel=cli_github&)
-- [Skills 仓库](https://github.com/modelstudioai/skills)
-- [获取 API Key](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
-- [GitHub Org](https://github.com/modelstudioai)
+打开 OpenWork，配置你刚才获取的 API Key：
+
+<!-- TODO: 从 hands-on 手册迁移具体配置步骤 -->
+
+```bash
+# 配置命令示例
+bailian config set api_key YOUR_API_KEY
+```
+
+配置成功后你应该看到：
+
+<!-- TODO: 补充成功提示截图或文字 -->
 
 ---
 
-*Built with ❤️ by Model Studio AI*
+## Step 4：选择一个精选 Skill
+
+以下 Skills 已验证可用，选择你感兴趣的一个：
+
+### 图文类
+
+<!-- TODO: 填入实际 Skill -->
+
+| Skill | 一句话说明 | 加载命令 |
+|-------|-----------|---------|
+| *待补充* | — | `bailian skill load xxx` |
+
+### 视频类
+
+| Skill | 一句话说明 | 加载命令 |
+|-------|-----------|---------|
+| *待补充* | — | `bailian skill load xxx` |
+
+### 文字类
+
+| Skill | 一句话说明 | 加载命令 |
+|-------|-----------|---------|
+| *待补充* | — | `bailian skill load xxx` |
+
+---
+
+## Step 5：加载并运行
+
+```bash
+# 加载你选的 Skill
+bailian skill load <skill-name>
+
+# 运行
+bailian skill run <skill-name>
+```
+
+<!-- TODO: 从 hands-on 手册迁移具体操作说明和预期产出 -->
+
+运行完成后，你应该看到 AI 生成的产出。
+
+---
+
+## Step 6：查看结果
+
+<!-- TODO: 补充各类 Skill 的产出示例和截图 -->
+
+恭喜！你已经跑通了 **OpenWork → 百炼 CLI → Skill** 的完整链路。
+
+---
+
+## 进阶探索（可选）
+
+已经跑通了？试试这些：
+
+- 换一个不同类型的 Skill 再跑一遍
+- 调整 Skill 的参数看看产出有什么变化
+- 浏览 [Skills 完整列表](https://github.com/ModelStudioAI/skills) 找找有没有适合你工作场景的
+
+---
+
+## 遇到问题？
+
+| 问题 | 解决方式 |
+|------|----------|
+| API Key 配置失败 | 检查 Key 是否完整复制，没有多余空格 |
+| Skill 加载报错 | 检查网络连接，确认能访问 GitHub |
+| CLI 命令找不到 | 确认 OpenWork 已更新到最新版 |
+
+现场有助教可以帮你解决——举手即可。
+
+更多问题参考 [FAQ →](/faq/)
+
+---
+
+## Workshop 之后
+
+- 📖 [完整文档](/guide/) — 随时回来查阅
+- 🎯 [精选 Skills](/skills/) — 发现更多场景
+- ✨ [分享你的案例](/showcase/) — 告诉我们你怎么用的
+- 💬 加入社群 — 持续交流（见现场引导）
+
+---
+
+> 本页面会在每场 Workshop 后更新。[帮我们改进 →](https://github.com/ModelStudioAI/modelstudioai.github.io/edit/main/workshop/index.md)
