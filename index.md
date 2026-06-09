@@ -10,18 +10,18 @@ permalink: /
 
 **第一步：获取 API Key**
 
-前往百炼平台获取你的 API Key：
+前往阿里云百炼平台获取你的 API Key：
 
 [获取 API Key →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
 
-**第二步：安装 OpenWork 或百炼 CLI**
+**第二步：安装 OpenWork 或阿里云百炼 CLI**
 
-OpenWork 桌面端已内置百炼 CLI，下载即用：
+OpenWork 桌面端已内置阿里云百炼 CLI，下载即用：
 
 - [OpenWork 桌面端](https://github.com/ModelStudioAI/openwork)（推荐）
-- [百炼 CLI 独立安装](https://github.com/ModelStudioAI/cli)
+- [阿里云百炼 CLI 独立安装](https://github.com/ModelStudioAI/cli)
 
-[了解百炼 CLI →](https://bailian.console.aliyun.com/cli?source_channel=cli_github&)
+[了解阿里云百炼 CLI →](https://bailian.console.aliyun.com/cli?source_channel=cli_github&)
 
 **第三步：加载一个 Skill 并运行**
 
@@ -36,8 +36,8 @@ OpenWork 桌面端已内置百炼 CLI，下载即用：
 
 | 项目 | 说明 | 链接 |
 |------|------|------|
-| **百炼 CLI** | 命令行 AI 工具，调用百炼模型 | [GitHub](https://github.com/ModelStudioAI/cli) |
-| **OpenWork** | 桌面端，内置百炼 CLI | [GitHub](https://github.com/ModelStudioAI/openwork) |
+| **阿里云百炼 CLI** | 命令行 AI 工具，调用阿里云百炼模型 | [GitHub](https://github.com/ModelStudioAI/cli) |
+| **OpenWork** | 桌面端，内置阿里云百炼 CLI | [GitHub](https://github.com/ModelStudioAI/openwork) |
 | **Skills** | 可复用的 AI 能力模块 | [GitHub](https://github.com/ModelStudioAI/skills) |
 
 ---
