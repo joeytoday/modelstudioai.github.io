@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<style>
+:root {
+  --primary: #1a73e8;
+  --primary-dark: #1557b0;
+  --bg: #ffffff;
+  --bg-alt: #f8f9fa;
+  --text: #202124;
+  --text-secondary: #5f6368;
+  --border: #e8eaed;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; color: var(--text); line-height: 1.6; }
+
+/* Nav */
+.nav { background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
+.nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-size: 18px; font-weight: 700; color: var(--text); text-decoration: none; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; }
+.nav-links a:hover { color: var(--primary); }
+
+/* Hero */
+.hero { padding: 80px 24px 60px; text-align: center; background: linear-gradient(135deg, #f0f4ff 0%, #e8f5e9 100%); }
+.hero h1 { font-size: 42px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.5px; }
+.hero p { font-size: 18px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 32px; }
+.hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.2s; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+.btn-secondary { background: var(--bg); color: var(--text); border: 1px solid var(--border); }
+.btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+
+/* Steps */
+.steps { padding: 60px 24px; max-width: 1100px; margin: 0 auto; }
+.steps h2 { text-align: center; font-size: 28px; margin-bottom: 40px; }
+.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.step-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; box-shadow: var(--card-shadow); }
+.step-num { display: inline-block; width: 32px; height: 32px; background: var(--primary); color: #fff; border-radius: 50%; text-align: center; line-height: 32px; font-weight: 700; font-size: 14px; margin-bottom: 12px; }
+.step-card h3 { font-size: 17px; margin-bottom: 8px; }
+.step-card p { font-size: 14px; color: var(--text-secondary); margin-bottom: 12px; }
+.step-card a { color: var(--primary); text-decoration: none; font-size: 14px; font-weight: 500; }
+.step-card a:hover { text-decoration: underline; }
+
+/* Ecosystem */
+.ecosystem { padding: 60px 24px; background: var(--bg-alt); }
+.ecosystem-inner { max-width: 1100px; margin: 0 auto; }
+.ecosystem h2 { text-align: center; font-size: 28px; margin-bottom: 40px; }
+.eco-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.eco-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; box-shadow: var(--card-shadow); transition: transform 0.2s; }
+.eco-card:hover { transform: translateY(-2px); }
+.eco-icon { font-size: 36px; margin-bottom: 12px; }
+.eco-card h3 { font-size: 16px; margin-bottom: 6px; }
+.eco-card p { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
+.eco-card a { color: var(--primary); text-decoration: none; font-size: 13px; font-weight: 500; }
+
+/* Docs links */
+.docs-section { padding: 60px 24px; max-width: 1100px; margin: 0 auto; }
+.docs-section h2 { text-align: center; font-size: 28px; margin-bottom: 40px; }
+.docs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.doc-link { display: flex; align-items: center; gap: 16px; padding: 20px; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; color: var(--text); transition: all 0.2s; }
+.doc-link:hover { border-color: var(--primary); box-shadow: var(--card-shadow); }
+.doc-link-icon { font-size: 28px; flex-shrink: 0; }
+.doc-link h3 { font-size: 15px; margin-bottom: 2px; }
+.doc-link p { font-size: 13px; color: var(--text-secondary); }
+
+/* Footer */
+.footer { padding: 40px 24px; background: var(--text); color: #9aa0a6; text-align: center; font-size: 13px; }
+.footer a { color: #8ab4f8; text-decoration: none; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 28px; }
+  .steps-grid, .eco-grid { grid-template-columns: 1fr; }
+  .docs-grid { grid-template-columns: 1fr; }
+  .nav-links { gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Model Studio AI</a>
+    <div class="nav-links">
+      <a href="/guide/">教程</a>
+      <a href="/skills/">Skills</a>
+      <a href="/workshop/">Workshop</a>
+      <a href="/showcase/">案例</a>
+      <a href="https://github.com/ModelStudioAI" target="_blank">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Model Studio AI</h1>
+  <p>用百炼 CLI + Skills，让 AI 融入你的日常工作流。开源、可扩展、开箱即用。</p>
+  <div class="hero-buttons">
+    <a href="/guide/" class="btn btn-primary">开始使用</a>
+    <a href="https://github.com/ModelStudioAI" class="btn btn-secondary" target="_blank">GitHub</a>
+  </div>
+</section>
+
+<section class="steps">
+  <h2>三步开始</h2>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h3>获取 API Key</h3>
+      <p>注册百炼平台，创建你的 API Key。</p>
+      <a href="{{ site.bailian_apikey_url }}" target="_blank">获取 API Key &rarr;</a>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h3>安装 OpenWork</h3>
+      <p>桌面端已内置百炼 CLI，下载即用。</p>
+      <a href="https://github.com/ModelStudioAI/openwork" target="_blank">下载 OpenWork &rarr;</a>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <h3>运行一个 Skill</h3>
+      <p>从 GitHub 加载精选 Skill，执行并查看 AI 产出。</p>
+      <a href="/skills/">查看精选 Skills &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="ecosystem">
+  <div class="ecosystem-inner">
+    <h2>生态全景</h2>
+    <div class="eco-grid">
+      <div class="eco-card">
+        <div class="eco-icon">&#9000;</div>
+        <h3>百炼 CLI</h3>
+        <p>命令行 AI 工具，调用百炼模型完成各种任务</p>
+        <a href="https://github.com/ModelStudioAI/cli" target="_blank">GitHub &rarr;</a>
+        &nbsp;&nbsp;
+        <a href="{{ site.bailian_cli_url }}" target="_blank">控制台 &rarr;</a>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">&#9114;</div>
+        <h3>OpenWork</h3>
+        <p>桌面端应用，内置百炼 CLI，开箱即用</p>
+        <a href="https://github.com/ModelStudioAI/openwork" target="_blank">GitHub &rarr;</a>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">&#10024;</div>
+        <h3>Skills</h3>
+        <p>可复用的 AI 能力模块，覆盖图文、视频、文字</p>
+        <a href="https://github.com/ModelStudioAI/skills" target="_blank">GitHub &rarr;</a>
+        &nbsp;&nbsp;
+        <a href="/skills/">精选列表 &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="docs-section">
+  <h2>文档与资源</h2>
+  <div class="docs-grid">
+    <a href="/guide/" class="doc-link">
+      <div class="doc-link-icon">&#128214;</div>
+      <div>
+        <h3>完整教程</h3>
+        <p>从零跑通 OpenWork + CLI + Skills 全流程</p>
+      </div>
+    </a>
+    <a href="/workshop/" class="doc-link">
+      <div class="doc-link-icon">&#128187;</div>
+      <div>
+        <h3>Workshop 实验手册</h3>
+        <p>线下活动专属引导页，Step by Step 动手操作</p>
+      </div>
+    </a>
+    <a href="/showcase/" class="doc-link">
+      <div class="doc-link-icon">&#127942;</div>
+      <div>
+        <h3>用户案例</h3>
+        <p>社区成员的真实使用案例与实践分享</p>
+      </div>
+    </a>
+    <a href="/faq/" class="doc-link">
+      <div class="doc-link-icon">&#10067;</div>
+      <div>
+        <h3>FAQ</h3>
+        <p>常见问题速查与踩坑记录</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Model Studio AI &mdash; Open Source AI Agent &amp; Skills Ecosystem</p>
+  <p style="margin-top:8px;">
+    <a href="https://github.com/ModelStudioAI" target="_blank">GitHub</a> &nbsp;|&nbsp;
+    <a href="/guide/">文档</a> &nbsp;|&nbsp;
+    <a href="/showcase/">社区</a>
+  </p>
+</footer>
+
+</body>
+</html>
