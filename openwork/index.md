@@ -1,72 +1,53 @@
 ---
-layout: page
+layout: doc
 title: OpenWork
 permalink: /openwork/
 ---
 
-# ModelStudio OpenWork
+# OpenWork
 
-**A local-first desktop application for AI agent workflows**
-
-OpenWork lets you work with AI agents on your desktop: chat with agents, manage multiple sessions, connect local projects and external tools, preview files and execution results, and move real development tasks forward in a permission-controlled environment.
+OpenWork 是 Model Studio AI 的桌面端应用，已内置百炼 CLI，开箱即用。
 
 ---
 
-## Features
+## 下载安装
 
-- **Multi-session management** — Separate sessions for different projects and tasks
-- **Local project workspaces** — Work against local codebases and filesystems
-- **Agent conversation interface** — View conversations, tool calls, and execution results
-- **Code execution and debugging** — Read, run, analyze, modify, and verify
-- **File and artifact previews** — Code, documents, spreadsheets, command output
-- **External data source connections** — MCP servers, GitHub, local filesystems
-- **Skills extension** — Capture domain knowledge as reusable skills
-- **Automated workflows** — Multi-step, cross-system task completion
-- **Permission mode controls** — Confirm file reads/writes and command execution
-- **Cross-platform** — macOS, Windows, and Linux
+<!-- TODO: 从 OpenWork repo 迁移下载链接和系统要求 -->
+
+- [GitHub 下载 →](https://github.com/ModelStudioAI/openwork)
+
+支持系统：macOS / Windows / Linux
 
 ---
 
-## How It Works
+## 内置百炼 CLI
 
-OpenWork runs as a desktop application paired with an agent runtime:
+OpenWork 已内置百炼 CLI，无需单独安装。打开 OpenWork 后即可使用 CLI 的全部功能。
 
-1. **Desktop app** — Session management, workspace management, file previews, permission confirmation
-2. **Agent runtime** — Model interaction, tool use, command execution, task progress
-
-This keeps the engineering power of command-line agents while providing a graphical experience for long-running tasks.
+[了解百炼 CLI →](/cli/)
 
 ---
 
-## Use Cases
+## 配置
 
-- Understand codebase structure and key modules
-- Diagnose test, build, or runtime failures
-- Modify code with automatic verification
-- Connect GitHub, MCP services, or internal APIs
-- Package recurring team processes as skills
-- Agent automation with permission confirmation
+### 绑定 API Key
 
----
+[获取百炼 API Key →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
 
-## Relationship to CLI
-
-| | CLI | OpenWork |
-|---|-----|---------|
-| Interface | Terminal | Desktop GUI |
-| Best for | Automation, tool invocation | Interactive, long-running tasks |
-| Context | Per-command | Persistent sessions |
-
-Together, they bring ModelStudio models and tools into real development workflows.
+<!-- TODO: 从 OpenWork repo 迁移配置步骤和截图 -->
 
 ---
 
-## Links
+## 加载 Skills
 
-- [GitHub Repository](https://github.com/modelstudioai/openwork)
-- [ModelStudio Console](https://bailian.console.aliyun.com/?source_channel=cli_github)
-- [Get API Key](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
+通过 OpenWork 可以直接从 GitHub 加载并运行 Skills：
+
+- [精选 Skills 列表 →](/skills/)
+- [完整教程 →](/guide/)
 
 ---
 
-*Built with ❤️ by Model Studio AI*
+## 更多资源
+
+- [OpenWork 源码 →](https://github.com/ModelStudioAI/openwork)
+- [完整上手教程 →](/guide/)
