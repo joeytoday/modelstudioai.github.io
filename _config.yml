@@ -1,44 +1,10 @@
-# Model Studio AI - Site Configuration
 title: Model Studio AI
-description: "AI Agent Skills & Tools by Aliyun Model Studio"
-url: "https://modelstudioai.github.io"
+description: AI Agent & Skills 开发者生态 — 官方文档与教程
+url: https://modelstudioai.github.io
 baseurl: ""
 
-# Theme
-theme: minima
+plugins: []
 
-# Navigation
-header_pages:
-  - guide/index.md
-  - cli/index.md
-  - openwork/index.md
-  - skills/index.md
-  - workshop/index.md
-  - showcase/index.md
-  - videos/index.md
-  - faq/index.md
-
-# Bailian Links (unified source_channel tracking)
-bailian:
-  cli_site: "https://bailian.console.aliyun.com/cli?source_channel=cli_github&"
-  api_key: "https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key"
-  console: "https://bailian.console.aliyun.com/?source_channel=cli_github"
-  docs: "https://help.aliyun.com/zh/model-studio/"
-  models: "https://help.aliyun.com/zh/model-studio/getting-started/models"
-
-# GitHub
-github:
-  org: "https://github.com/modelstudioai"
-  cli_repo: "https://github.com/modelstudioai/cli"
-  skills_repo: "https://github.com/modelstudioai/skills"
-  openwork_repo: "https://github.com/modelstudioai/openwork"
-
-# Community
-community:
-  dingtalk_group: "182405011072"
-  dingtalk_group_name: "Dev@ModelStudioAI"
-
-# Build settings
-markdown: kramdown
-plugins:
-  - jekyll-seo-tag
+# 百炼 UTM 链接（全站统一引用）
+bailian_cli_url: "https://bailian.console.aliyun.com/cli?source_channel=cli_github&"
+bailian_apikey_url: "https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key"
