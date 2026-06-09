@@ -1,71 +1,67 @@
 ---
-layout: page
-title: CLI
+layout: doc
+title: 百炼 CLI
 permalink: /cli/
 ---
 
-# Aliyun Model Studio CLI
+# 百炼 CLI
 
-**The official command-line interface for Aliyun Model Studio (DashScope) AI Platform**
+百炼 CLI 是 Model Studio AI 的命令行工具，直接调用百炼模型完成各种 AI 任务。
 
-Chat with Qwen, generate images & videos, understand images, call agents, manage memory, search the web — all from your terminal. Built for AI Agents: every command works as a structured tool call.
+[百炼 CLI 控制台 →](https://bailian.console.aliyun.com/cli?source_channel=cli_github&)
 
 ---
 
-## Install
+## 安装方式
+
+### 方式一：通过 OpenWork（推荐）
+
+OpenWork 桌面端已内置百炼 CLI，无需单独安装：
+
+- [下载 OpenWork →](https://github.com/ModelStudioAI/openwork)
+
+### 方式二：独立安装
+
+<!-- TODO: 从 CLI repo README 迁移安装命令 -->
 
 ```bash
-npm install -g bailian-cli
-npx skills add modelstudioai/cli --all -g
+# 安装命令示例
+npm install -g @modelstudioai/cli
 ```
 
-> Requires Node.js >= 22.12
-
 ---
 
-## Core Capabilities
+## 配置
 
-| Capability | Command | Description |
-|-----------|---------|-------------|
-| Text Chat | `bl text chat` | Qwen3.7-max conversations |
-| Multimodal | `bl omni` | Text + image + audio + video |
-| Image Gen | `bl image generate` | Qwen-Image 2.0 |
-| Image Edit | `bl image edit` | AI-powered image editing |
-| Video Gen | `bl video generate` | HappyHorse-1.0 series |
-| Video Edit | `bl video edit` | Natural-language video editing |
-| Speech TTS | `bl speech synthesize` | CosyVoice streaming TTS |
-| Speech ASR | `bl speech recognize` | FunAudio-ASR (30 languages) |
-| Vision | `bl vision` | Qwen-VL understanding |
-| Knowledge | `bl knowledge retrieve` | Multimodal RAG |
-| Memory | `bl memory` | Cross-session memory |
-| Apps | `bl app call` | Invoke published agents |
-| MCP | `bl mcp` | Orchestrate MCP servers |
-| Web Search | `bl text chat --enable-search` | Real-time internet retrieval |
-| Advisor | `bl advisor recommend` | Model recommendation |
+### 获取 API Key
 
----
+[获取百炼 API Key →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
 
-## Authentication
+### 配置 Key
+
+<!-- TODO: 从 CLI repo 迁移配置说明 -->
 
 ```bash
-# API Key (most commands)
-bl auth login --api-key sk-xxxxx
-
-# Console login (app list, usage)
-bl auth login --console
+bailian config set api_key YOUR_API_KEY
 ```
 
-👉 [Get your API Key](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
+---
+
+## 常用命令
+
+<!-- TODO: 从 CLI repo 迁移命令参考 -->
+
+| 命令 | 说明 |
+|------|------|
+| `bailian config` | 配置管理 |
+| `bailian skill load` | 加载 Skill |
+| `bailian skill run` | 运行 Skill |
+| `bailian skill list` | 查看已加载的 Skills |
 
 ---
 
-## Links
+## 更多资源
 
-- [GitHub Repository](https://github.com/modelstudioai/cli)
-- [CLI Official Site](https://bailian.console.aliyun.com/cli?source_channel=cli_github&)
-- [API Documentation](https://help.aliyun.com/zh/model-studio/)
-- [Changelog](https://github.com/modelstudioai/cli/blob/main/CHANGELOG.md)
-
----
-
-*Built with ❤️ by Model Studio AI*
+- [CLI 源码 →](https://github.com/ModelStudioAI/cli)
+- [完整上手教程 →](/guide/)
+- [精选 Skills →](/skills/)
