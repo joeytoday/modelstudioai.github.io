@@ -1,71 +1,52 @@
 ---
 layout: home
-title: Home
+title: Model Studio AI
+permalink: /
 ---
-
-# Model Studio AI
-
-**AI Agent Skills & Tools — powered by Aliyun Model Studio**
-
-One command to orchestrate 10+ foundation models. Build real AI Agents from your terminal.
 
 ---
 
-## Quick Start — 3 Steps
+## 三步开始
 
-### 1. Install
+**第一步：获取 API Key**
 
-```bash
-npm install -g bailian-cli
-```
+前往百炼平台获取你的 API Key：
 
-> Requires Node.js >= 22.12
+[获取 API Key →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
 
-### 2. Authenticate
+**第二步：安装 OpenWork 或百炼 CLI**
 
-Get your free API Key: [Aliyun Model Studio Console](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
+OpenWork 桌面端已内置百炼 CLI，下载即用：
 
-```bash
-bl auth login --api-key sk-xxxxx
-```
+- [OpenWork 桌面端](https://github.com/ModelStudioAI/openwork)（推荐）
+- [百炼 CLI 独立安装](https://github.com/ModelStudioAI/cli)
 
-### 3. Go
+[了解百炼 CLI →](https://bailian.console.aliyun.com/cli?source_channel=cli_github&)
 
-```bash
-# Chat with Qwen
-bl text chat --message "Hello, what can you do?"
+**第三步：加载一个 Skill 并运行**
 
-# Generate an image
-bl image generate --prompt "A cat astronaut on Mars" --out-dir ./images/
+从 GitHub 选一个精选 Skill，加载到 CLI 中执行：
 
-# Generate a video
-bl video generate --image ./cat.png --prompt "Make it move" --download cat.mp4
-```
+- [精选 Skills 列表 →](/skills/)
+- [完整上手教程 →](/guide/)
 
 ---
 
-## What's Here
+## 生态全景
 
-| Section | Description |
-|---------|-------------|
-| [Guide](./guide/) | Complete getting-started tutorial |
-| [CLI](./cli/) | Aliyun Model Studio CLI — full-modal AI from your terminal |
-| [OpenWork](./openwork/) | Desktop AI agent workspace |
-| [Skills](./skills/) | Curated Agent Skills collection |
-| [Workshop](./workshop/) | Upcoming hands-on events |
-| [Showcase](./showcase/) | Community projects & demos |
-| [Videos](./videos/) | Video tutorials |
-| [FAQ](./faq/) | Frequently asked questions |
+| 项目 | 说明 | 链接 |
+|------|------|------|
+| **百炼 CLI** | 命令行 AI 工具，调用百炼模型 | [GitHub](https://github.com/ModelStudioAI/cli) |
+| **OpenWork** | 桌面端，内置百炼 CLI | [GitHub](https://github.com/ModelStudioAI/openwork) |
+| **Skills** | 可复用的 AI 能力模块 | [GitHub](https://github.com/ModelStudioAI/skills) |
 
 ---
 
-## Links
+## 社区
 
-- [GitHub Org](https://github.com/modelstudioai)
-- [CLI Site](https://bailian.console.aliyun.com/cli?source_channel=cli_github&)
-- [API Documentation](https://help.aliyun.com/zh/model-studio/)
-- [Get API Key](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
+- [完整教程](/guide/) — 从零跑通全流程
+- [用户案例](/showcase/) — 看看别人怎么用
+- [常见问题](/faq/) — 踩坑速查
+- [视频教程](/videos/) — Workshop 录屏与教程
 
----
-
-*Built with ❤️ by Model Studio AI*
+想贡献你的使用案例？[提交 PR →](https://github.com/ModelStudioAI/modelstudioai.github.io/tree/main/showcase)
