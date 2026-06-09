@@ -1,71 +1,72 @@
 ---
-layout: page
+layout: doc
 title: FAQ
 permalink: /faq/
 ---
 
-# Frequently Asked Questions
+# 常见问题
+
+> 本页持续更新。遇到新问题？[提 Issue](https://github.com/ModelStudioAI/modelstudioai.github.io/issues) 或直接 [编辑本页](https://github.com/ModelStudioAI/modelstudioai.github.io/edit/main/faq/index.md)。
 
 ---
 
-## General
+## 基础问题
 
-**Q: What is Model Studio AI?**
+### Model Studio AI 是什么？
 
-Model Studio AI is the open-source ecosystem for Aliyun Model Studio (Bailian). It provides CLI tools, desktop applications, and curated Agent Skills to help developers build AI-powered workflows.
+Model Studio AI 是一个开源的 AI Agent & Skills 生态，包含百炼 CLI（命令行工具）、OpenWork（桌面端）和一系列可复用的 Skills。
 
-**Q: Is it free to use?**
+### 百炼 CLI 和 OpenWork 是什么关系？
 
-The CLI tool is free and open-source. API calls are billed through your Alibaba Cloud account. Many models offer free-tier quotas — check with `bl usage free --model <model-name>`.
+OpenWork 是桌面端应用，已内置百炼 CLI。你可以选择用 OpenWork（推荐）或独立安装百炼 CLI。
 
-**Q: What models are available?**
+### 需要付费吗？
 
-Aliyun Model Studio is a model aggregation platform (MaaS). One API Key gives you access to Qwen, DeepSeek, Kimi, GLM, MiniMax, and more. See the [model list](https://help.aliyun.com/zh/model-studio/getting-started/models).
-
----
-
-## Installation
-
-**Q: What's the minimum Node.js version?**
-
-Node.js >= 22.12 is required for the CLI.
-
-**Q: How do I get an API Key?**
-
-Visit the [API Key management page](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key) and create a new key.
-
-**Q: Can I use it on Windows?**
-
-Yes. The CLI works on macOS, Linux, and Windows. OpenWork desktop app supports all three platforms.
+工具本身开源免费。Skills 运行时会调用百炼 API，消耗 token，百炼提供一定免费额度。
 
 ---
 
-## Troubleshooting
+## 安装与配置
 
-**Q: `bl: command not found`**
+### 如何获取 API Key？
 
-Run `npm install -g bailian-cli` to install globally. Make sure your npm global bin directory is in your PATH.
+[前往百炼平台获取 →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
 
-**Q: Authentication failed**
+### API Key 配置后不生效？
 
-1. Check your API Key is valid: [Console](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
-2. Re-authenticate: `bl auth login --api-key sk-xxxxx`
-3. Verify: `bl auth status`
+<!-- TODO: 活动后根据实际问题补充 -->
 
-**Q: Skills not loading**
-
-Open a new agent session after installing skills. The agent reads `SKILL.md` on session start.
-
----
-
-## Community
-
-**Q: How can I contribute?**
-
-- Submit Skills as PRs to [modelstudioai/skills](https://github.com/modelstudioai/skills)
-- Report bugs and request features via GitHub Issues
-- Join our DingTalk group: Dev@ModelStudioAI (182405011072)
+请检查：
+1. Key 是否正确复制（没有多余空格）
+2. 网络连接是否正常
+3. 尝试重启 OpenWork / CLI
 
 ---
 
-*Built with ❤️ by Model Studio AI*
+## Skills 相关
+
+### 如何找到可用的 Skills？
+
+查看 [精选 Skills 列表 →](/skills/)
+
+### Skill 运行报错怎么办？
+
+<!-- TODO: 活动后根据实际问题补充 -->
+
+常见原因：
+1. API Key 未配置或已过期
+2. 网络连接问题
+3. Skill 版本不兼容
+
+---
+
+## 社区
+
+### 如何贡献使用案例？
+
+查看 [Showcase 贡献指南 →](/showcase/)
+
+### 如何反馈问题？
+
+- [GitHub Issues](https://github.com/ModelStudioAI/modelstudioai.github.io/issues)
+- 加入社群（微信群二维码见各活动页面）
