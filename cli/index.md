@@ -1,14 +1,14 @@
 ---
 layout: doc
-title: 百炼 CLI
+title: 阿里云百炼 CLI
 permalink: /cli/
 ---
 
-# 百炼 CLI
+# 阿里云百炼 CLI
 
-百炼 CLI 是 Model Studio AI 的命令行工具，直接调用百炼模型完成各种 AI 任务。
+阿里云百炼 CLI 是 Model Studio AI 的命令行工具，直接调用阿里云百炼模型完成各种 AI 任务。
 
-[百炼 CLI 控制台 →](https://bailian.console.aliyun.com/cli?source_channel=cli_github&)
+[阿里云百炼 CLI 控制台 →](https://bailian.console.aliyun.com/cli?source_channel=cli_github&)
 
 ---
 
@@ -16,7 +16,7 @@ permalink: /cli/
 
 ### 方式一：通过 OpenWork（推荐）
 
-OpenWork 桌面端已内置百炼 CLI，无需单独安装：
+OpenWork 桌面端已内置阿里云百炼 CLI，无需单独安装：
 
 - [下载 OpenWork →](https://github.com/ModelStudioAI/openwork)
 
@@ -35,7 +35,7 @@ npm install -g @modelstudioai/cli
 
 ### 获取 API Key
 
-[获取百炼 API Key →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
+[获取阿里云百炼 API Key →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
 
 ### 配置 Key
 
