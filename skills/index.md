@@ -1,104 +1,60 @@
 ---
-layout: page
-title: Skills
+layout: doc
+title: 精选 Skills
 permalink: /skills/
 ---
 
-# Model Studio AI Skills
+# 精选 Skills
 
-**Curated Agent Skills collection — verified by the ModelStudio team**
+精选 Skills 是经过验证的高质量 AI 能力模块，覆盖图文、视频、文字三类场景。每个 Skill 运行时调用百炼 API。
 
-Each skill is an independent, composable workflow unit. Install one or many to extend your AI Agent's capabilities.
+[获取 API Key →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
 
 ---
 
-## Quick Install
+## 图文类
+
+<!-- TODO: 从 Skills repo 迁移具体 Skill 列表 -->
+
+| Skill | 说明 | 链接 |
+|-------|------|------|
+| *待补充* | — | — |
+
+## 视频类
+
+| Skill | 说明 | 链接 |
+|-------|------|------|
+| *待补充* | — | — |
+
+## 文字类
+
+| Skill | 说明 | 链接 |
+|-------|------|------|
+| *待补充* | — | — |
+
+---
+
+## 如何使用
 
 ```bash
-npx skills add modelstudioai/skills
+# 加载 Skill
+bailian skill load <skill-name>
+
+# 运行
+bailian skill run <skill-name>
 ```
 
-Or paste this to your AI Agent:
-
-> Please install Bailian AI Skills for me:
-> 1. Check if Node.js is installed (>= 18), install it if not
-> 2. Run: `npx skills add modelstudioai/skills`
-> 3. Once installed, list the installed skills and what I can do
+详细步骤请参考 [完整教程 →](/guide/)
 
 ---
 
-## Prerequisites
+## 贡献 Skill
 
-👉 [Get your API Key](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key) — required for any skill that calls `bl` commands.
+如果你开发了有用的 Skill，欢迎提交到社区：
 
----
-
-## First-Party Skills
-
-| Skill | Description |
-|-------|-------------|
-| **bailian-cli** | Core CLI skill — chat, image, video, speech, vision, apps, memory, RAG, search |
-| **bailian-docs-llm-wiki** | In-repo knowledge base for model specs, pricing, API references |
-| **spark-video** | End-to-end short-film production pipeline |
+- [Skills 源码仓库 →](https://github.com/ModelStudioAI/skills)
+- [提交你的 Skill（PR 指南）](https://github.com/ModelStudioAI/skills/blob/main/CONTRIBUTING.md)
 
 ---
 
-## Curated Community Skills
-
-### 🛠️ Skill Management
-
-| Skill | Example Prompt |
-|-------|---------------|
-| skill-creator | "Write me a skill that analyzes viral pet videos" |
-| find-skills | "Find me a skill for making PPTs" |
-| skills-mcp | "Find me the latest AI skills" |
-| skill-atlas | "Run a competitive analysis between iPhone and Xiaomi" |
-
-### 💻 Code Development
-
-| Skill | Example Prompt |
-|-------|---------------|
-| mcp-builder | "Build me an MCP Server for weather services" |
-| goframe-v2 | "Write a login API in GoFrame v2" |
-
-### 🎨 Design & Creativity
-
-| Skill | Example Prompt |
-|-------|---------------|
-| shadcn-ui | "Build a chat room page with shadcn-ui" |
-| ui-ux-pro-max | "Design a personal blog UI" |
-| canvas-design | "Design a poster themed around freedom" |
-| frontend-design | "Design a promotional page for a phone" |
-
-### 📝 Documentation
-
-| Skill | Example Prompt |
-|-------|---------------|
-| internal-comms | "Write a team weekly report" |
-| xlsx/docx/pdf/pptx | "Make a PPT on sales data for 2025" |
-| doc-coauthoring | "Write a technical design doc" |
-
-### 🎬 Video Production
-
-| Skill | Example Prompt |
-|-------|---------------|
-| spark-video | "Make a product ad video from this image" |
-| shanyin-screenwriting-master | "Make a live-action video of Little Red Riding Hood" |
-
-### 🧪 Testing & Quality
-
-| Skill | Example Prompt |
-|-------|---------------|
-| e2e-testing | "Write e2e tests covering signup → login → checkout" |
-
----
-
-## Links
-
-- [GitHub Repository](https://github.com/modelstudioai/skills)
-- [CLI Site](https://bailian.console.aliyun.com/cli?source_channel=cli_github&)
-- [Get API Key](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
-
----
-
-*Built with ❤️ by Model Studio AI*
+> 精选 Skills 列表持续更新中。[帮我们补充 →](https://github.com/ModelStudioAI/modelstudioai.github.io/edit/main/skills/index.md)
