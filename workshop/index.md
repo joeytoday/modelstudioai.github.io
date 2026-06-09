@@ -4,11 +4,32 @@ title: Workshop
 permalink: /workshop/
 ---
 
-# CLI & Skills 动手实验
+# 阿里云百炼 CLI 动手实验
 
-欢迎参加 Model Studio AI 线下 Workshop！本页是你的全程操作指引——按步骤执行即可完成一个完整 AI 作品。
+欢迎参加 6.11 阿里云百炼 CLI 线下分享会！本页是你的全程操作指引——按步骤从零搭建一个**节点式 AI 自媒体工作流编辑器**。
 
 > **预计用时：90 分钟** | 现场 tokens 管够，放心使用。
+
+---
+
+## 演示项目：Maidan-Studio
+
+**节点式 AI 自媒体工作流编辑器** — 自媒体内容生产的 ComfyUI。
+
+把「选题 → 文案 → 平台分发 → 封面 → 多页内容图」这条自媒体内容生产链路，变成可拖拽、可编排、可保存为模板的可视化工作流。
+
+| 项目 | 说明 |
+|------|------|
+| 仓库地址 | [github.com/CzzzzzzJ/bailian-cli](https://github.com/CzzzzzzJ/bailian-cli) |
+| 作者 | 麦当mdldm（[@CzzzzzzJ](https://github.com/CzzzzzzJ)） |
+| 技术栈 | Next.js 15 + React Flow + Supabase + 阿里云百炼 CLI（bl） |
+
+**两条内置生产线：**
+
+| 模板 | 流水线 |
+|------|--------|
+| 小红书日更-轻量版 | 关键词 → 选题搜索 → 多维评分 → 选 1 → 脚本生成 → 三平台改写 + 封面 |
+| Omi 小红书图文-精装版 | 素材 → 笔记导演 → 资产看板 → 封面 + 多页内容图 |
 
 ---
 
@@ -29,224 +50,164 @@ permalink: /workshop/
 
 ---
 
-## Step 2：安装 OpenWork
-
-OpenWork 桌面端已内置阿里云百炼 CLI，下载安装即可使用全部能力。
-
-### 下载地址
-
-| 系统 | 下载链接 | 说明 |
-|------|----------|------|
-| **macOS (Apple Silicon)** | [GitHub Releases](https://github.com/modelstudioai/openwork/releases) | .dmg 文件，双击安装拖入 Applications |
-| **macOS (Intel)** | [GitHub Releases](https://github.com/modelstudioai/openwork/releases) | 同上，选 x64 版本 |
-| **Windows** | [GitHub Releases](https://github.com/modelstudioai/openwork/releases) | .exe 安装程序，按提示完成 |
-| **Linux** | [GitHub Releases](https://github.com/modelstudioai/openwork/releases) | .AppImage 或 .deb，按发行版选择 |
-
-### 安装后确认
-
-打开 OpenWork，你应该看到主界面的对话窗口。左下角显示版本号即为安装成功。
-
-### 备选方案：独立安装阿里云百炼 CLI
-
-如果你更习惯纯终端操作，也可以不装 OpenWork，直接安装 CLI：
+## Step 2：安装阿里云百炼 CLI
 
 ```bash
 npm install -g bailian-cli
 ```
 
-> 需要 Node.js >= 22.12。安装后终端输入 `bl --version` 确认。
+> 需要 Node.js >= 22.12
 
----
-
-## Step 3：配置 API Key
-
-### 方式一：OpenWork 内配置（推荐）
-
-1. 打开 OpenWork
-2. 在对话框中输入以下内容，让 Agent 帮你配置：
-
-```
-请帮我配置阿里云百炼 API Key：sk-你的Key粘贴在这里
-```
-
-Agent 会自动执行 `bl auth login --api-key sk-xxxxx` 并确认成功。
-
-### 方式二：终端命令行配置
+安装后确认：
 
 ```bash
-# 登录认证（推荐，Key 会持久化到 ~/.bailian/config.json）
-bl auth login --api-key sk-xxxxx
+bl --version
+```
 
-# 或者设置环境变量（临时生效）
+### 配置 API Key
+
+```bash
+bl auth login --api-key sk-xxxxx
+```
+
+或通过环境变量：
+
+```bash
 export DASHSCOPE_API_KEY=sk-xxxxx
 ```
 
-### 配置成功的预期提示
-
-```
-✓ API Key 已保存
-✓ 区域: cn-beijing
-✓ 账号验证通过
-```
-
-如果看到 `✓` 绿色提示，说明配置完成。
-
-### 验证配置
+### 快速测试
 
 ```bash
-# 发一条消息测试
-bl text chat --message "你好"
+# 聊天测试
+bl text chat --message "你好，自我介绍一下"
+
+# 生成图片
+bl image generate --prompt "一只穿宇航服的猫" --out-dir ./images/
 ```
 
-如果收到千问的回复，恭喜你，环境就绪！
+> 阿里云百炼 CLI 为 AI Agent 而生，每条命令即工具调用。除了终端直接使用外，也可在 Cursor、Qwen Code、Claude Desktop、Windsurf、Cline 等主流 AI Agent 框架中作为工具集成。
 
 ---
 
-## Step 4：选择一个精选 Skill
-
-以下 Skills 已验证可用，覆盖图文、视频、文字三类场景。选择你感兴趣的一个：
-
-### 🎨 图文类
-
-| Skill | 一句话说明 | 加载命令 |
-|-------|-----------|---------|
-| **canvas-design** | 用 AI 生成视觉海报，支持自定义主题和风格 | `npx skills add anthropics/skills` 选 canvas-design |
-| **frontend-design** | 生成高质量产品推广页面（HTML） | `npx skills add anthropics/skills` 选 frontend-design |
-| **baoyu-xhs-images** | 生成小红书风格信息图，10 种视觉风格 | `npx skills add baoyu/xhs-images` |
-
-### 🎬 视频类
-
-| Skill | 一句话说明 | 加载命令 |
-|-------|-----------|---------|
-| **spark-video** | 一句话生成短片：剧本 → 分镜 → 渲染 → 合成 | `npx skills add modelstudioai/skills` 选 spark-video |
-| **shanyin-screenwriting-master** | 真人实拍风格影视短片生成 | `npx skills add Shanyin-ai/shanyin-screenwriting-master` |
-
-### 📝 文字类
-
-| Skill | 一句话说明 | 加载命令 |
-|-------|-----------|---------|
-| **marketing-writer** | 生成营销文案，支持多平台多风格 | `npx skills add gushuaialan1/marketing-writer` |
-| **doc-coauthoring** | 结构化技术文档协作撰写 | `npx skills add anthropics/skills` 选 doc-coauthoring |
-| **internal-comms** | 周报、日报、团队通讯类文档 | `npx skills add anthropics/skills` 选 internal-comms |
-
-> 不确定选哪个？推荐 **spark-video**（视频）或 **canvas-design**（海报），效果最直观。
-
----
-
-## Step 5：加载并运行 Skill
-
-### 在 OpenWork 中运行（推荐）
-
-直接在对话框中用自然语言告诉 Agent 你想做什么。Agent 会自动调用对应 Skill。
-
-**示例提示词：**
-
-```
-用 spark-video 帮我生成一段 30 秒的短视频。
-主题：一只猫在太空探险。
-风格：皮克斯动画风格，温馨治愈。
-```
-
-```
-用 canvas-design 帮我设计一张海报。
-主题：夏日咖啡节，清凉蓝绿配色，要有手绘感。
-```
-
-```
-用 marketing-writer 帮我写一段小红书推广文案。
-产品：智能台灯，卖点是护眼+无线充电+氛围灯三合一。
-```
-
-### 在终端中运行
-
-如果你使用独立 CLI + Qwen Code / Claude Code：
+## Step 3：克隆演示项目
 
 ```bash
-# 安装 Skill（首次需要）
-npx skills add modelstudioai/skills --all -g
-
-# 在 Agent 会话中说出你的需求，Agent 自动读取 SKILL.md 并执行
-# 以 spark-video 为例：
-# "帮我用 spark-video 生成一段产品广告视频，产品图在 ./product.png"
+git clone https://github.com/CzzzzzzJ/bailian-cli.git
+cd bailian-cli
+pnpm install
 ```
 
-### 常用 bl 命令参考
+> 前置依赖：Node.js >= 22.12、pnpm >= 9
+
+---
+
+## Step 4：配置环境
+
+复制 `.env.example` 到 `.env.local`：
+
+```env
+# 阿里云百炼
+DASHSCOPE_API_KEY=sk-your-key
+
+# Supabase（用于登录 + 模板持久化）
+NEXT_PUBLIC_SUPABASE_URL=https://<project>.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+```
+
+### 数据库迁移
+
+在 Supabase Dashboard → SQL Editor 依次执行：
 
 ```bash
-# 文字对话
-bl text chat --message "帮我写一首关于夏天的诗"
-
-# 图片生成
-bl image generate --prompt "赛博朋克风格的猫咖" --out-dir ./output/
-
-# 视频生成（图生视频）
-bl video generate --image ./input.png --prompt "让画面动起来" --download output.mp4
-
-# 语音合成
-bl speech synthesize --text "你好，欢迎来到 Workshop" --output hello.mp3
+supabase/schema.sql        # 8 张表 + 触发器
+supabase/policies.sql      # RLS 策略
 ```
 
 ---
 
-## Step 6：查看结果
+## Step 5：启动项目
 
-### 图文类产出
+```bash
+pnpm --filter @maidan/web exec next dev --turbopack -p 3030
+```
 
-- **canvas-design** → 在当前目录生成 HTML 文件，浏览器打开即可看到完整海报
-- **frontend-design** → 生成完整的产品页 HTML，包含响应式布局和动效
-- **baoyu-xhs-images** → 生成 1-10 张卡通信息图 PNG，可直接发小红书
-
-### 视频类产出
-
-- **spark-video** → 在 `projects/<项目名>/<集数>/final/` 目录下生成 MP4 文件
-- **shanyin-screenwriting-master** → 同上，输出最终合成视频
-
-### 文字类产出
-
-- **marketing-writer** → 直接在对话中输出文案，可要求导出 Markdown
-- **doc-coauthoring** → 分阶段输出结构化文档，最终生成完整 Markdown 或 DOCX
-- **internal-comms** → 输出格式化的周报/通讯内容
-
-> 所有通过 `bl` 生成的文件都会保存在你指定的 `--out-dir` 或当前工作目录下。
-
-恭喜！你已经完成了 **获取 Key → 安装 → 配置 → 选 Skill → 运行 → 产出** 的完整链路。
+打开 [http://localhost:3030](http://localhost:3030) → 注册账号 → 选择模板 → 修改 PromptTemplate 里的关键词 → 点击运行。
 
 ---
 
-## 进阶探索（时间允许的话）
+## Step 6：动手体验工作流
 
-已经跑通了？可以试试这些：
+### 核心玩法
 
-- 换一个不同类型的 Skill 再跑一遍，感受多模态能力组合
-- 调整提示词的细节（风格、时长、配色），观察 AI 如何响应
-- 组合多个 `bl` 命令形成流水线，比如「文生图 → 图生视频 → 配音」
-- 尝试 `bl advisor recommend --message "你的场景描述"` 让 AI 推荐最适合的模型
+每个节点 = 一个阿里云百炼 CLI 的能力封装；连线 = 数据从上游产物喂给下游。
+
+**节点 → CLI 命令对照：**
+
+| 节点 | 调用命令 | 说明 |
+|------|----------|------|
+| TopicSearch | `bl text chat`（qwen3.7-max） | 选题搜索，结构化 JSON 输出 |
+| ScriptGen | `bl text chat`（qwen3.7-max / qwq-plus） | 脚本生成，开思考链切 qwq-plus |
+| CoverGen | `bl image generate`（qwen-image-2.0） | 封面生成 |
+| AssetGen | `bl image edit` | 图生图，IP 形象 + 风格 |
+| XHSContentGen | `bl image edit`（并行） | 多页内容图并行生成 |
+
+### 操作要点
+
+- **拖图入画布**：直接将图片拖入画布 → 自动上传 → 创建 ImageInput 节点 → 连线到 AssetGen 作为 IP 形象
+- **Skill 模板挂载**：节点抽屉里挂载 Skill markdown，运行时自动拼入 system prompt
+- **人工审核节点**：流程执行到「人工审核」节点时暂停，等你确认后继续
+
+### 推荐体验路径
+
+1. 选「小红书日更-轻量版」模板
+2. 修改 PromptTemplate 中的关键词（比如换成「用 AI 做自媒体」）
+3. 点击运行，观察节点逐个变绿
+4. 查看产出：选题评分、脚本文案、三平台改写、封面图片
+5. 尝试挂载不同的 Skill，对比输出差异
 
 ---
 
-## 遇到问题？
+## 阿里云百炼 CLI 核心能力一览
 
-| 问题 | 解决方式 |
+除了本演示项目用到的能力，阿里云百炼 CLI 还覆盖：
+
+| 能力 | 命令 | 说明 |
+|------|------|------|
+| 文本对话 | `bl text chat` | Qwen3.7-max，支持 agentic coding |
+| 全模态对话 | `bl omni` | 文本 + 图片 + 音频 + 视频多模态 |
+| 图像生成 | `bl image generate` | Qwen-Image 2.0，专业文字渲染 |
+| 图像编辑 | `bl image edit` | 图生图、风格迁移、多图合成 |
+| 视频生成 | `bl video generate` | HappyHorse-1.0，文/图/参考 → 视频 |
+| 语音合成 | `bl speech synthesize` | CosyVoice 流式 TTS + 声音克隆 |
+| 语音识别 | `bl speech recognize` | FunAudio-ASR，30 语言覆盖 |
+| 图片理解 | `bl vision` | Qwen-VL，长视频分析、文档解析 |
+| 知识库 | `bl knowledge retrieve` | 多模态 RAG 检索 |
+| 联网搜索 | `bl search` | 实时互联网检索 |
+| MCP 集成 | `bl mcp` | 编排百炼 MCP 服务 |
+| 模型推荐 | `bl advisor recommend` | 描述场景获取最优模型建议 |
+
+更多命令参考 → [阿里云百炼 CLI 控制台](https://bailian.console.aliyun.com/cli?source_channel=cli_github&)
+
+---
+
+## 常见问题
+
+| 问题 | 解决方案 |
 |------|----------|
-| API Key 配置后提示「无效」 | 检查 Key 是否完整复制（以 `sk-` 开头），没有多余空格或换行。回到 [API Key 页面](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key) 重新创建一个试试 |
-| `bl: command not found` | 确认已安装：`npm install -g bailian-cli`，然后重启终端。或直接用 OpenWork（已内置） |
-| Skill 加载失败 / 网络超时 | 现场 Wi-Fi 可能拥挤，切换手机热点重试。或让旁边的同学帮你 AirDrop 安装包 |
-| 视频生成很慢（等了 5 分钟+） | 正常！视频渲染需要排队，通常 3-8 分钟完成。可以先切到文字/图片类 Skill 玩 |
-| `node: command not found` | 需要安装 Node.js >= 22.12。macOS: `brew install node`，Windows: 从 [nodejs.org](https://nodejs.org) 下载安装 |
-| 生成的图片/视频质量不满意 | 优化提示词：加入更具体的描述（风格、色调、构图）。试试 `bl advisor recommend` 换个模型 |
-
-> 现场有助教巡场，遇到任何卡住的情况直接举手！
+| `bl: command not found` | 重新安装：`npm install -g bailian-cli`，确保 Node.js >= 22.12 |
+| API Key 无效 | 确认 Key 以 `sk-` 开头，在百炼控制台检查是否已激活 |
+| 图片生成超时 | 图片生成通常需要 10-30s，耐心等待；如持续超时检查网络 |
+| pnpm install 失败 | 确认 pnpm >= 9：`npm install -g pnpm@latest` |
+| Supabase 连接失败 | 确认 `.env.local` 中的 URL 和 Key 正确，Supabase 项目已运行 |
+| 节点执行报错 | 查看节点状态变 error 后，点击节点查看详情抽屉中的错误信息 |
 
 ---
 
-## Workshop 之后
+## 社区与资源
 
-- 📖 [完整文档](/guide/) — 随时回来查阅更多用法
-- 🎯 [精选 Skills](/skills/) — 发现更多场景和能力
-- ✨ [分享你的作品](/showcase/) — 提交到 Showcase，让更多人看到你的创作
-- 💬 加入开发者社群 — 钉钉群 Dev@ModelStudioAI（群号 182405011072）持续交流
-- 🏆 路演获奖？别忘了把作品 PR 到 [modelstudioai/skills](https://github.com/modelstudioai/skills)，成为社区共建者！
-
----
-
-> 本页面会在每场 Workshop 后迭代更新。发现问题或有改进建议？[帮我们改进 →](https://github.com/ModelStudioAI/modelstudioai.github.io/edit/main/workshop/index.md)
+- 阿里云百炼 CLI GitHub：[github.com/modelstudioai/cli](https://github.com/modelstudioai/cli)
+- 演示项目源码：[github.com/CzzzzzzJ/bailian-cli](https://github.com/CzzzzzzJ/bailian-cli)
+- Agent Skills 精选：[github.com/modelstudioai/skills](https://github.com/modelstudioai/skills)
+- OpenWork（开源桌面 Agent）：[github.com/modelstudioai/openwork](https://github.com/modelstudioai/openwork)
+- [阿里云百炼 CLI 控制台](https://bailian.console.aliyun.com/cli?source_channel=cli_github&) | [获取 API Key](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
