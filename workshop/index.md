@@ -12,7 +12,7 @@ permalink: /workshop/
 
 ---
 
-## Step 1：获取百炼 API Key
+## Step 1：获取阿里云百炼 API Key
 
 点击下方链接，注册/登录阿里云百炼平台并创建 API Key：
 
@@ -31,7 +31,7 @@ permalink: /workshop/
 
 ## Step 2：安装 OpenWork
 
-OpenWork 桌面端已内置百炼 CLI，下载安装即可使用全部能力。
+OpenWork 桌面端已内置阿里云百炼 CLI，下载安装即可使用全部能力。
 
 ### 下载地址
 
@@ -46,7 +46,7 @@ OpenWork 桌面端已内置百炼 CLI，下载安装即可使用全部能力。
 
 打开 OpenWork，你应该看到主界面的对话窗口。左下角显示版本号即为安装成功。
 
-### 备选方案：独立安装百炼 CLI
+### 备选方案：独立安装阿里云百炼 CLI
 
 如果你更习惯纯终端操作，也可以不装 OpenWork，直接安装 CLI：
 
@@ -66,7 +66,7 @@ npm install -g bailian-cli
 2. 在对话框中输入以下内容，让 Agent 帮你配置：
 
 ```
-请帮我配置百炼 API Key：sk-你的Key粘贴在这里
+请帮我配置阿里云百炼 API Key：sk-你的Key粘贴在这里
 ```
 
 Agent 会自动执行 `bl auth login --api-key sk-xxxxx` 并确认成功。
