@@ -6,7 +6,7 @@ permalink: /guide/
 
 # 完整上手教程
 
-本教程将带你走通 **百炼 → OpenWork → CLI → Skills** 的完整链路。
+本教程将带你走通 **阿里云百炼 → OpenWork → CLI → Skills** 的完整链路。
 
 > 预计用时：15-20 分钟
 
@@ -14,21 +14,21 @@ permalink: /guide/
 
 ## 前置准备
 
-### 1. 获取百炼 API Key
+### 1. 获取阿里云百炼 API Key
 
-前往百炼平台注册并获取 API Key：
+前往阿里云百炼平台注册并获取 API Key：
 
 [获取 API Key →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
 
 ### 2. 安装 OpenWork
 
-OpenWork 桌面端已内置百炼 CLI：
+OpenWork 桌面端已内置阿里云百炼 CLI：
 
 - [下载 OpenWork](https://github.com/ModelStudioAI/openwork)
 
-也可以选择独立安装百炼 CLI：
+也可以选择独立安装阿里云百炼 CLI：
 
-- [百炼 CLI 安装指南](/cli/)
+- [阿里云百炼 CLI 安装指南](/cli/)
 
 ---
 
@@ -36,7 +36,7 @@ OpenWork 桌面端已内置百炼 CLI：
 
 <!-- TODO: 从 hands-on 手册迁移具体配置步骤 -->
 
-打开 OpenWork 后，配置你的百炼 API Key：
+打开 OpenWork 后，配置你的阿里云百炼 API Key：
 
 ```bash
 # 示例命令（请根据实际 CLI 替换）
