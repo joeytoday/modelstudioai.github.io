@@ -1,114 +1,88 @@
 ---
-layout: page
-title: Guide
+layout: doc
+title: 完整上手教程
 permalink: /guide/
 ---
 
-# Getting Started with Model Studio AI
+# 完整上手教程
 
-A complete walkthrough from zero to your first AI Agent workflow.
+本教程将带你走通 **百炼 → OpenWork → CLI → Skills** 的完整链路。
 
----
-
-## Prerequisites
-
-- **Node.js** >= 22.12 ([download](https://nodejs.org))
-- **API Key** — [Get yours free](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
+> 预计用时：15-20 分钟
 
 ---
 
-## Step 1: Install the CLI
+## 前置准备
 
-```bash
-npm install -g bailian-cli
-```
+### 1. 获取百炼 API Key
 
-Install the Agent Skills:
+前往百炼平台注册并获取 API Key：
 
-```bash
-npx skills add modelstudioai/cli --all -g
-```
+[获取 API Key →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
 
----
+### 2. 安装 OpenWork
 
-## Step 2: Authenticate
+OpenWork 桌面端已内置百炼 CLI：
 
-```bash
-# Recommended: API Key authentication
-bl auth login --api-key sk-xxxxx
+- [下载 OpenWork](https://github.com/ModelStudioAI/openwork)
 
-# Or: Browser-based console login (for app list / usage commands)
-bl auth login --console
-```
+也可以选择独立安装百炼 CLI：
+
+- [百炼 CLI 安装指南](/cli/)
 
 ---
 
-## Step 3: Explore Capabilities
+## 步骤一：配置 API Key
 
-### Text Chat
+<!-- TODO: 从 hands-on 手册迁移具体配置步骤 -->
 
-```bash
-bl text chat --message "Explain quantum computing in simple terms"
-```
-
-### Multimodal (Omni)
+打开 OpenWork 后，配置你的百炼 API Key：
 
 ```bash
-bl omni --message "Describe this image" --image ./photo.jpg
-```
-
-### Image Generation
-
-```bash
-bl image generate --prompt "A cyberpunk cityscape at sunset" --out-dir ./output/
-```
-
-### Video Generation
-
-```bash
-bl video generate --image ./scene.png --prompt "Add cinematic camera movement" --download output.mp4
-```
-
-### Speech Synthesis
-
-```bash
-bl speech synthesize --text "Hello, welcome to Model Studio" --voice cosyvoice-v1 --output hello.mp3
-```
-
-### Web Search
-
-```bash
-bl text chat --message "What are the latest AI developments this week?" --enable-search
+# 示例命令（请根据实际 CLI 替换）
+bailian config set api_key YOUR_API_KEY
 ```
 
 ---
 
-## Step 4: Install Agent Skills
+## 步骤二：浏览精选 Skills
 
-Skills are reusable workflow units that extend your AI Agent's capabilities:
+查看可用的精选 Skills：
+
+- [精选 Skills 列表 →](/skills/)
+
+每个 Skill 支持图文、视频、文字等不同场景。选择一个你感兴趣的 Skill。
+
+---
+
+## 步骤三：加载并运行 Skill
+
+<!-- TODO: 从 hands-on 手册迁移具体操作步骤 -->
 
 ```bash
-# Browse and install curated skills
-npx skills add modelstudioai/skills
+# 示例：从 GitHub 加载一个 Skill
+bailian skill load <skill-name>
 
-# Install a specific community skill
-npx skills add JohnKeating1997/spark-video
+# 运行 Skill
+bailian skill run <skill-name>
 ```
 
 ---
 
-## Step 5: Build Your Own
+## 步骤四：查看结果
 
-Combine CLI commands and skills to create complete AI Agent workflows. See [Showcase](../showcase/) for community examples.
+Skill 运行完成后，你将看到 AI 生成的产出。
 
----
-
-## Next Steps
-
-- [CLI Reference](../cli/) — All commands and options
-- [Skills Collection](../skills/) — Browse curated skills
-- [FAQ](../faq/) — Common questions answered
+<!-- TODO: 补充具体产出截图/示例 -->
 
 ---
 
-*Built with ❤️ by Model Studio AI*
+## 下一步
+
+- 尝试其他 [精选 Skills](/skills/)
+- 分享你的使用案例 → [提交到 Showcase](/showcase/)
+- 遇到问题？查看 [FAQ](/faq/)
+
+---
+
+> 本教程持续迭代中。发现问题或想补充内容？[欢迎提 PR](https://github.com/ModelStudioAI/modelstudioai.github.io/edit/main/guide/index.md)
