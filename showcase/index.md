@@ -1,49 +1,68 @@
 ---
-layout: page
-title: Showcase
+layout: doc
+title: 用户案例
 permalink: /showcase/
 ---
 
-# Community Showcase
+# 用户案例 Showcase
 
-Projects and demos built with Model Studio AI tools.
-
----
-
-## Featured
-
-### One-Sentence Cinematic Video
-
-A complete 2-minute, 16:9 cinematic short film — produced end-to-end from a single natural-language sentence, with zero manual editing.
-
-**Prompt:** "Generate a roughly 2-minute video in Japanese cinematic style — a sweet first-love story about a high-school girl. 16:9."
-
-**Tools used:** Qwen Code + Aliyun Model Studio CLI + spark-video Skill
-
-→ [Watch the demo](https://cloud.video.taobao.com/vod/dS2F4huqbw5Nfe5L3wwb3grz2q2DNYD3retq8dU-iHo.mp4)
+来自社区成员的真实使用案例。每一个案例都是一次实践分享。
 
 ---
 
-## Submit Your Project
+## 如何贡献你的案例
 
-Built something with Model Studio AI? We'd love to feature it!
+1. Fork [本仓库](https://github.com/ModelStudioAI/modelstudioai.github.io)
+2. 在 `showcase/` 目录下新建一个 markdown 文件，命名格式：`YYYY-MM-DD-你的标题.md`
+3. 按下方模板填写内容
+4. 提交 PR
 
-1. Create your project using `bl` commands or Agent Skills
-2. Open an issue on [modelstudioai/skills](https://github.com/modelstudioai/skills/issues) with:
-   - Project name and description
-   - Tools/skills used
-   - Demo link or screenshots
-3. Outstanding projects may be invited to submit a PR
+### 案例模板
+
+```markdown
+---
+layout: doc
+title: 你的案例标题
+author: 你的 GitHub ID
+date: YYYY-MM-DD
+tags: [图文, CLI, 某行业]
+---
+
+## 我做了什么
+
+简述你用 Model Studio AI 完成了什么任务。
+
+## 使用的工具
+
+- OpenWork / CLI
+- 用了哪个 Skill
+- 百炼模型版本（如适用）
+
+## 步骤
+
+1. ...
+2. ...
+3. ...
+
+## 效果展示
+
+（截图、产出文件、或简要描述效果）
+
+## 踩坑记录
+
+（可选：遇到了什么问题，怎么解决的）
+```
 
 ---
 
-## Community
+## 案例列表
 
-Join the developer community:
+<!-- 每场活动后邀请参与者提交 PR，案例将按时间倒序显示在这里 -->
 
-- GitHub: [modelstudioai](https://github.com/modelstudioai)
-- DingTalk Group: Dev@ModelStudioAI (182405011072)
+*暂无案例，等你来第一个！*
+
+[提交你的案例 →](https://github.com/ModelStudioAI/modelstudioai.github.io/new/main/showcase)
 
 ---
 
-*Built with ❤️ by Model Studio AI*
+> 案例合集持续生长中。每场 Workshop 和社区活动后，我们会邀请参与者分享自己的实践。
