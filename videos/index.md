@@ -1,44 +1,29 @@
 ---
-layout: page
-title: Videos
+layout: doc
+title: 视频教程
 permalink: /videos/
 ---
 
-# Video Tutorials
+# 视频教程
 
-Learn Model Studio AI through video demonstrations.
-
----
-
-## Featured
-
-### One-Sentence Cinematic Video (2 min)
-
-A complete end-to-end demonstration: one natural-language prompt → AI Agent orchestrates screenplay, storyboard, rendering, and stitching → final 2-minute cinematic short film.
-
-→ [Watch](https://cloud.video.taobao.com/vod/dS2F4huqbw5Nfe5L3wwb3grz2q2DNYD3retq8dU-iHo.mp4)
+Workshop 录屏和教程视频。
 
 ---
 
-## Getting Started
+## Workshop 录屏
 
-*(More tutorials coming soon)*
+<!-- 6/11 Workshop 后补充 -->
 
-- CLI Installation & First Commands
-- Building Your First Agent Skill
-- Image Generation Workflows
-- Video Production with spark-video
+*即将上线 — 6/11 观猹社区 CLI Workshop 录屏*
 
 ---
 
-## Submit a Tutorial
+## 教程短视频
 
-Created a video tutorial using Model Studio AI tools? Share it with the community:
+<!-- Workshop 后拆条 -->
 
-1. Upload to your preferred platform
-2. Open an issue on [GitHub](https://github.com/modelstudioai/skills/issues) with the link
-3. We'll feature quality tutorials here
+*即将上线*
 
 ---
 
-*Built with ❤️ by Model Studio AI*
+> 视频持续更新中。每场活动后我们会上传录屏和精华片段。
