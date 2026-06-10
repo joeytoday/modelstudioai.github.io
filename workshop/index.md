@@ -2,6 +2,8 @@
 layout: doc
 title: Workshop
 permalink: /workshop/
+description: "阿里云百炼线下工作坊——用 Maidan-Studio 节点式编辑器 + 百炼 CLI + Skills 现场跑通内容创作工作流。完整动手指南，6 步从环境搭建到出片。"
+keywords: "百炼工作坊,Workshop,Maidan-Studio,节点式 AI,AI 工作流编辑器,内容创作,XHS 自媒体,bailian-cli 实战,React Flow"
 ---
 
 # 阿里云百炼 CLI 动手实验
