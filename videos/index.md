@@ -2,6 +2,8 @@
 layout: doc
 title: 视频教程
 permalink: /videos/
+description: "阿里云百炼 CLI、OpenWork、Skills 视频教程合集——从安装、首次运行到生态实战，零基础到进阶完整覆盖。"
+keywords: "百炼视频教程,bailian-cli 教程视频,AI Agent 视频,OpenWork 演示,Aliyun Model Studio Tutorial"
 ---
 
 # 视频教程
