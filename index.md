@@ -2,6 +2,8 @@
 layout: home
 title: Model Studio AI
 permalink: /
+description: "阿里云百炼 CLI、OpenWork、Agent Skills 一站式开发者生态——一行命令调用 Qwen、DeepSeek、Kimi 等多家大模型，让你的 AI Agent 立即拥有完整能力。"
+keywords: "阿里云百炼,Model Studio,百炼 CLI,bailian-cli,AI Agent,OpenWork,Agent Skills,Qwen,通义千问,DashScope,大模型 API,LLM 工具"
 ---
 
 ---
