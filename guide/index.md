@@ -243,7 +243,7 @@ bl advisor recommend --message "我需要做一个能看图回答的对话机器
 ### 参与社区
 
 - 分享你的使用案例 → [Showcase →](/showcase/)
-- 贡献你的 Skill → [Skills 贡献指南](https://github.com/modelstudioai/skills/blob/main/CONTRIBUTING.md)
+- 贡献你的 Skill → [Skills 贡献指南](https://github.com/modelstudioai/skills/issues/new)
 - 提 Issue / PR → [GitHub Org](https://github.com/modelstudioai)
 
 ---
