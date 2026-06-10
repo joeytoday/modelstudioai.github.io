@@ -46,40 +46,29 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
 /* Hero with background image */
 .hero {
   position: relative;
-  padding: 100px 24px 80px;
+  padding: 40px 24px 32px;
   text-align: center;
   overflow: hidden;
   background: var(--canvas);
-  min-height: 540px;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.hero-bg {
-  position: absolute;
-  top: -10px; left: -10px; right: -10px; bottom: -10px;
-  background: url('/assets/hero-bg.jpg') center center / cover no-repeat;
-  opacity: 0.18;
-  filter: blur(2px) saturate(1.2);
-  transform: scale(1.02);
-}
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.85) 100%);
-}
+.hero-region { position: relative; }
+/* hero bg/overlay removed */
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 680px;
 }
 .hero h1 {
-  font-size: 52px;
+  font-size: 44px;
   font-weight: 800;
-  letter-spacing: -2.2px;
+  letter-spacing: -1.8px;
   line-height: 1.12;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   color: var(--ink);
 }
 .hero .gradient-text {
@@ -87,13 +76,16 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline-block;
+  padding-right: 0.08em;
+  margin-right: -0.08em;
 }
 .hero p {
-  font-size: 17px;
+  font-size: 16px;
   color: var(--body);
   max-width: 520px;
-  margin: 0 auto 40px;
-  line-height: 28px;
+  margin: 0 auto 28px;
+  line-height: 26px;
 }
 .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn { display: inline-flex; align-items: center; height: 44px; padding: 0 24px; border-radius: var(--rounded-pill); text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.2s; border: none; cursor: pointer; }
@@ -103,10 +95,10 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
 .btn-secondary:hover { border-color: var(--ink); }
 
 /* Steps */
-.steps { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
-.steps h2 { text-align: center; font-size: 32px; font-weight: 700; letter-spacing: -1.2px; margin-bottom: 48px; }
+.steps { padding: 48px 24px 64px; max-width: 1100px; margin: 0 auto; }
+.steps h2 { text-align: center; font-size: 28px; font-weight: 700; letter-spacing: -1px; margin-bottom: 32px; }
 .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.step-card { background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--rounded-lg); padding: 32px 24px; transition: box-shadow 0.2s, border-color 0.2s; }
+.step-card { background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--rounded-lg); padding: 24px 20px; transition: box-shadow 0.2s, border-color 0.2s; }
 .step-card:hover { border-color: transparent; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
 .step-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--canvas-soft-2); border-radius: 50%; font-size: 13px; font-weight: 600; color: var(--body); margin-bottom: 16px; }
 .step-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.3px; }
@@ -145,8 +137,8 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
 
 /* Mobile */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 32px; letter-spacing: -1.5px; }
-  .hero { padding: 80px 24px 60px; min-height: 400px; }
+  .hero h1 { font-size: 28px; letter-spacing: -1.2px; }
+  .hero { padding: 32px 24px 24px; min-height: 220px; }
   .steps-grid, .eco-grid { grid-template-columns: 1fr; }
   .docs-grid { grid-template-columns: 1fr; }
   .nav-links a:not(.nav-cta) { display: none; }
@@ -170,8 +162,6 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>Born open, <span class="gradient-text">ship AI together</span>.</h1>
     <p>Explore tools &middot; Build skills &middot; Grow together.</p>
