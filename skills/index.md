@@ -42,7 +42,7 @@ permalink: /skills/
 | [frontend-design](https://github.com/modelstudioai/skills/blob/main/AWESOME_SKILLS.md#frontend-design) | 为小米手机设计一个高质量推广页 | [anthropics/skills](https://github.com/anthropics/skills) |
 | [shadcn-ui](https://github.com/modelstudioai/skills/blob/main/AWESOME_SKILLS.md#shadcn-ui) | 用 shadcn-ui 组件库做一个聊天室页面 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) |
 | [ui-ux-pro-max](https://github.com/modelstudioai/skills/blob/main/AWESOME_SKILLS.md#ui-ux-pro-max) | 用 50 种风格中的一种设计个人博客 UI | [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) |
-| [baoyu-xhs-images](https://github.com/baoyu/xhs-images) | 把这篇内容拆成小红书图文系列（10 风格 × 8 版式） | 社区 |
+| [baoyu-xhs-images](https://github.com/modelstudioai/skills/blob/main/AWESOME_SKILLS.md) | 把这篇内容拆成小红书图文系列（10 风格 × 8 版式） | 社区 |
 
 ### 🎬 视频 / 音频
 
@@ -149,7 +149,7 @@ Skills 安装后无需手动「加载」与「运行」——你的 AI Agent 会
 如果你开发了实用的 Skill，欢迎共建社区仓库：
 
 - [Skill 仓库 →](https://github.com/modelstudioai/skills)
-- [贡献指南 →](https://github.com/modelstudioai/skills/blob/main/CONTRIBUTING.md)
+- [贡献指南 →](https://github.com/modelstudioai/skills/issues/new)
 - 需要先在真实场景验证，标记为「可用」后才会被收录
 
 ---
