@@ -132,7 +132,7 @@ supabase/policies.sql      # RLS 策略
 pnpm --filter @maidan/web exec next dev --turbopack -p 3030
 ```
 
-打开 [http://localhost:3030](http://localhost:3030) → 注册账号 → 选择模板 → 修改 PromptTemplate 里的关键词 → 点击运行。
+打开 `http://localhost:3030` → 注册账号 → 选择模板 → 修改 PromptTemplate 里的关键词 → 点击运行。
 
 ---
 
