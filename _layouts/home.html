@@ -19,6 +19,9 @@
   --canvas: #ffffff;
   --canvas-soft: #fafafa;
   --canvas-soft-2: #f5f5f5;
+  --bg-card: #fafafa;
+  --bg-card-hover: #f5f5f5;
+  --border-soft: #eaeaea;
   --link: #0070f3;
   --link-deep: #0761d1;
   --gradient-start: #007cf0;
@@ -27,20 +30,20 @@
   --rounded-md: 8px;
   --rounded-lg: 12px;
   --rounded-pill: 100px;
-  --font-sans: Inter, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; background: var(--canvas); }
+body { font-family: var(--font-sans); color: var(--ink); line-height: 1.5; background: var(--canvas); -webkit-font-smoothing: antialiased; }
 
 /* Nav */
 .nav { height: 64px; display: flex; align-items: center; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); background: rgba(255,255,255,0.85); border-bottom: 1px solid var(--hairline); }
 .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; width: 100%; display: flex; align-items: center; justify-content: space-between; }
-.nav-logo { font-size: 16px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -0.5px; }
+.nav-logo { font-size: 15px; font-weight: 600; color: var(--ink); text-decoration: none; letter-spacing: -0.3px; }
 .nav-links { display: flex; gap: 8px; align-items: center; }
-.nav-links a { color: var(--body); text-decoration: none; font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: var(--rounded-pill); transition: background 0.15s, color 0.15s; }
+.nav-links a { color: var(--body); text-decoration: none; font-size: 13px; font-weight: 400; padding: 6px 12px; border-radius: var(--rounded-pill); transition: background 0.15s, color 0.15s; }
 .nav-links a:hover { background: var(--canvas-soft-2); color: var(--ink); }
-.nav-cta { background: var(--primary) !important; color: var(--on-primary) !important; font-size: 14px !important; font-weight: 500; padding: 6px 16px !important; border-radius: var(--rounded-sm); }
+.nav-cta { background: var(--primary) !important; color: var(--on-primary) !important; font-size: 13px !important; font-weight: 500; padding: 6px 14px !important; border-radius: var(--rounded-sm); }
 .nav-cta:hover { opacity: 0.9; }
 
 /* Hero with background image */
@@ -49,7 +52,7 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
   padding: 40px 24px 32px;
   text-align: center;
   overflow: hidden;
-  background: var(--canvas);
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8f5e9 100%);
   min-height: 280px;
   display: flex;
   flex-direction: column;
@@ -64,11 +67,11 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
   max-width: 680px;
 }
 .hero h1 {
-  font-size: 44px;
-  font-weight: 800;
-  letter-spacing: -1.8px;
-  line-height: 1.12;
-  margin-bottom: 14px;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+  margin-bottom: 16px;
   color: var(--ink);
 }
 .hero .gradient-text {
@@ -84,11 +87,12 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
   font-size: 16px;
   color: var(--body);
   max-width: 520px;
-  margin: 0 auto 28px;
+  margin: 0 auto 32px;
   line-height: 26px;
+  letter-spacing: 0.3px;
 }
 .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.btn { display: inline-flex; align-items: center; height: 44px; padding: 0 24px; border-radius: var(--rounded-pill); text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.2s; border: none; cursor: pointer; }
+.btn { display: inline-flex; align-items: center; height: 40px; padding: 0 22px; border-radius: var(--rounded-pill); text-decoration: none; font-weight: 500; font-size: 14px; transition: all 0.2s; border: none; cursor: pointer; }
 .btn-primary { background: var(--primary); color: var(--on-primary); }
 .btn-primary:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.15); transform: translateY(-1px); }
 .btn-secondary { background: var(--canvas); color: var(--ink); border: 1px solid var(--hairline); }
@@ -96,48 +100,48 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
 
 /* Steps */
 .steps { padding: 48px 24px 64px; max-width: 1100px; margin: 0 auto; }
-.steps h2 { text-align: center; font-size: 28px; font-weight: 700; letter-spacing: -1px; margin-bottom: 32px; }
+.steps h2 { text-align: center; font-size: 28px; font-weight: 600; letter-spacing: -1px; margin-bottom: 32px; }
 .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.step-card { background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--rounded-lg); padding: 24px 20px; transition: box-shadow 0.2s, border-color 0.2s; }
-.step-card:hover { border-color: transparent; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
-.step-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: var(--canvas-soft-2); border-radius: 50%; font-size: 13px; font-weight: 600; color: var(--body); margin-bottom: 16px; }
-.step-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.3px; }
-.step-card p { font-size: 14px; color: var(--body); line-height: 22px; margin-bottom: 16px; }
-.step-card a { color: var(--link); text-decoration: none; font-size: 14px; font-weight: 500; }
+.step-card { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: var(--rounded-lg); padding: 24px 20px; transition: background 0.2s, box-shadow 0.2s, border-color 0.2s; }
+.step-card:hover { background: var(--bg-card-hover); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.step-num { font-size: 11px; font-weight: 600; color: var(--mute); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; display: block; }
+.step-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 8px; letter-spacing: -0.3px; }
+.step-card p { font-size: 13px; color: var(--body); line-height: 1.6; margin-bottom: 16px; }
+.step-card a { color: var(--link); text-decoration: none; font-size: 13px; font-weight: 500; }
 .step-card a:hover { text-decoration: underline; }
 
 /* Ecosystem */
-.ecosystem { padding: 80px 24px; background: var(--canvas-soft); }
+.ecosystem { padding: 64px 24px; background: var(--canvas); }
 .ecosystem-inner { max-width: 1100px; margin: 0 auto; }
-.ecosystem h2 { text-align: center; font-size: 32px; font-weight: 700; letter-spacing: -1.2px; margin-bottom: 48px; }
+.ecosystem h2 { text-align: center; font-size: 28px; font-weight: 600; letter-spacing: -1px; margin-bottom: 32px; }
 .eco-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.eco-card { background: var(--canvas); border: 1px solid var(--hairline); border-radius: var(--rounded-lg); padding: 32px 24px; transition: box-shadow 0.2s, transform 0.2s; }
-.eco-card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
-.eco-icon { font-size: 28px; margin-bottom: 16px; display: block; }
-.eco-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; letter-spacing: -0.3px; }
-.eco-card p { font-size: 14px; color: var(--body); line-height: 22px; margin-bottom: 16px; }
-.eco-card a { color: var(--link); text-decoration: none; font-size: 13px; font-weight: 500; }
+.eco-card { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: var(--rounded-lg); padding: 32px 24px; transition: background 0.2s, box-shadow 0.2s, transform 0.2s; }
+.eco-card:hover { background: var(--bg-card-hover); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.eco-icon { font-size: 22px; margin-bottom: 14px; display: block; opacity: 0.8; }
+.eco-card h3 { font-size: 14px; font-weight: 500; margin-bottom: 6px; letter-spacing: -0.2px; }
+.eco-card p { font-size: 13px; color: var(--body); line-height: 1.6; margin-bottom: 12px; }
+.eco-card a { color: var(--link); text-decoration: none; font-size: 12px; font-weight: 500; }
 .eco-card a:hover { text-decoration: underline; }
 
 /* Docs links */
-.docs-section { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
-.docs-section h2 { text-align: center; font-size: 32px; font-weight: 700; letter-spacing: -1.2px; margin-bottom: 48px; }
+.docs-section { padding: 56px 24px 72px; max-width: 1100px; margin: 0 auto; }
+.docs-section h2 { text-align: center; font-size: 28px; font-weight: 600; letter-spacing: -1px; margin-bottom: 32px; }
 .docs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.doc-link { display: flex; align-items: center; gap: 16px; padding: 20px 24px; border: 1px solid var(--hairline); border-radius: var(--rounded-md); text-decoration: none; color: var(--ink); transition: all 0.15s; }
-.doc-link:hover { border-color: var(--ink); }
-.doc-link-icon { font-size: 24px; flex-shrink: 0; }
-.doc-link h3 { font-size: 15px; font-weight: 600; margin-bottom: 2px; letter-spacing: -0.2px; }
-.doc-link p { font-size: 13px; color: var(--body); }
+.doc-link { display: flex; align-items: center; gap: 16px; padding: 20px 24px; background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: var(--rounded-lg); text-decoration: none; color: var(--ink); transition: background 0.15s, border-color 0.15s; }
+.doc-link:hover { background: var(--bg-card-hover); border-color: var(--mute); }
+.doc-link-icon { font-size: 20px; flex-shrink: 0; opacity: 0.7; }
+.doc-link h3 { font-size: 14px; font-weight: 500; margin-bottom: 2px; letter-spacing: -0.2px; }
+.doc-link p { font-size: 12px; color: var(--body); }
 
 /* Footer */
 .footer { padding: 48px 24px; border-top: 1px solid var(--hairline); text-align: center; }
-.footer p { font-size: 13px; color: var(--mute); }
+.footer p { font-size: 12px; color: var(--mute); }
 .footer a { color: var(--body); text-decoration: none; }
 .footer a:hover { color: var(--ink); }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 28px; letter-spacing: -1.2px; }
+  .hero h1 { font-size: 28px; font-weight: 600; letter-spacing: -1px; }
   .hero { padding: 32px 24px 24px; min-height: 220px; }
   .steps-grid, .eco-grid { grid-template-columns: 1fr; }
   .docs-grid { grid-template-columns: 1fr; }
@@ -176,19 +180,19 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
   <h2>三步开始</h2>
   <div class="steps-grid">
     <div class="step-card">
-      <div class="step-num">1</div>
+      <div class="step-num">Step 1</div>
       <h3>获取 API Key</h3>
       <p>注册阿里云百炼平台，一个 Key 调用 Qwen、DeepSeek、Kimi 等多家模型。</p>
       <a href="{{ site.bailian_apikey_url }}" target="_blank">获取 API Key &rarr;</a>
     </div>
     <div class="step-card">
-      <div class="step-num">2</div>
+      <div class="step-num">Step 2</div>
       <h3>在你的 Agent 中使用</h3>
       <p>阿里云百炼 CLI 为 AI Agent 而生，每条命令即工具调用。支持在 Cursor、Qwen Code、Claude Desktop、Windsurf、Cline 等主流框架中直接使用；也可以通过 <a href="https://github.com/modelstudioai/openwork" target="_blank">OpenWork</a>（开源桌面 Agent）开箱即用。</p>
       <a href="{{ site.bailian_cli_url }}" target="_blank">了解 CLI &rarr;</a>
     </div>
     <div class="step-card">
-      <div class="step-num">3</div>
+      <div class="step-num">Step 3</div>
       <h3>运行一个 Skill</h3>
       <p>从 GitHub 加载精选 Skill，一句话驱动 AI 完成完整工作流。</p>
       <a href="/skills/">查看精选 Skills &rarr;</a>
@@ -209,10 +213,12 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
         <a href="{{ site.bailian_cli_url }}" target="_blank">控制台 &rarr;</a>
       </div>
       <div class="eco-card">
-        <span class="eco-icon">&#9724;</span>
-        <h3>兼容主流 AI Agent</h3>
-        <p>在 Cursor、Qwen Code、Claude Desktop、Windsurf、Cline 等框架中使用阿里云百炼 CLI 作为工具，赋予 Agent 全模态 AI 能力。</p>
-        <a href="{{ site.bailian_cli_url }}" target="_blank">集成指南 &rarr;</a>
+        <span class="eco-icon">&#9881;</span>
+        <h3>场景方案</h3>
+        <p>从真实需求出发的 AI 应用实践——Prompt 模板、效果复现、最佳实践，逐步覆盖更多行业场景。</p>
+        <a href="https://github.com/modelstudioai/livetranslatedemo" target="_blank">Live Translate Demo &rarr;</a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/modelstudioai/awesome-happyhorse-prompts" target="_blank">HappyHorse Prompts &rarr;</a>
       </div>
       <div class="eco-card">
         <span class="eco-icon">&#128421;</span>
@@ -236,19 +242,19 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
   <h2>文档与资源</h2>
   <div class="docs-grid">
     <a href="/guide/" class="doc-link">
-      <div class="doc-link-icon">&#128214;</div>
+      <div class="doc-link-icon">&#9657;</div>
       <div><h3>完整教程</h3><p>从零跑通 OpenWork + CLI + Skills 全流程</p></div>
     </a>
     <a href="/workshop/" class="doc-link">
-      <div class="doc-link-icon">&#128187;</div>
+      <div class="doc-link-icon">&#9881;</div>
       <div><h3>Workshop 实验手册</h3><p>线下活动专属引导页，Step by Step 动手</p></div>
     </a>
     <a href="/showcase/" class="doc-link">
-      <div class="doc-link-icon">&#127942;</div>
+      <div class="doc-link-icon">&#10022;</div>
       <div><h3>用户案例</h3><p>社区成员的真实使用案例与实践分享</p></div>
     </a>
     <a href="/faq/" class="doc-link">
-      <div class="doc-link-icon">&#10067;</div>
+      <div class="doc-link-icon">&#63;</div>
       <div><h3>FAQ</h3><p>常见问题速查与踩坑记录</p></div>
     </a>
   </div>
