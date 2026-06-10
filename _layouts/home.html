@@ -3,8 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.title | default: site.title }}</title>
-<meta name="description" content="{{ site.description }}">
+{%- assign page_title = page.title | default: site.title -%}
+{%- assign page_desc  = page.description | default: site.description -%}
+{%- assign page_kw    = page.keywords | default: site.keywords -%}
+{%- assign page_url   = site.url | append: page.url -%}
+
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_desc }}">
+<meta name="keywords" content="{{ page_kw }}">
+<link rel="canonical" href="{{ page_url }}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page_url }}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ page_desc }}">
+<meta property="og:image" content="{{ site.og_image }}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ page_desc }}">
+<meta name="twitter:image" content="{{ site.og_image }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
