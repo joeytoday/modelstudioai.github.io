@@ -2,6 +2,8 @@
 layout: doc
 title: 阿里云百炼 CLI
 permalink: /cli/
+description: "阿里云百炼 CLI（bl）是为 AI Agent 而生的命令行工具——每条命令即结构化工具调用。支持文本对话、图像生成、视频生成、语音合成、视觉理解、MCP、知识检索等 15+ 能力。"
+keywords: "百炼 CLI,bailian-cli,bl 命令,AI 命令行,文本对话,图像生成,视频生成,语音合成,Qwen Code,DashScope,MCP,Aliyun Model Studio"
 ---
 
 # 阿里云百炼 CLI
