@@ -2,6 +2,8 @@
 layout: doc
 title: 完整上手教程
 permalink: /guide/
+description: "5 步从零到一：注册阿里云百炼、获取 API Key、安装 CLI、加载 Skill、跑出你的第一个 AI 产物。覆盖 Cursor、Qwen Code、Claude Desktop、OpenWork 等主流 Agent 集成路径。"
+keywords: "阿里云百炼上手,百炼 CLI 安装,API Key 获取,bailian-cli 教程,AI Agent 入门,Qwen 调用,Cursor 集成,Claude Desktop,Quick Start"
 ---
 
 # 完整上手教程
