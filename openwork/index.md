@@ -2,6 +2,8 @@
 layout: doc
 title: OpenWork
 permalink: /openwork/
+description: "OpenWork 是阿里云百炼团队开源的桌面 AI Agent——内置 CLI、Skills 体系与对话界面，下载安装即用，零配置体验完整的 Agent 工作流。macOS / Windows / Linux 全平台支持。"
+keywords: "OpenWork,开源桌面 Agent,阿里云百炼桌面,AI 桌面应用,Agent 工作空间,CLI 集成,Agent Skills,本地 AI 助手,Desktop Agent"
 ---
 
 # OpenWork
