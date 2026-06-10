@@ -2,6 +2,8 @@
 layout: doc
 title: 用户案例
 permalink: /showcase/
+description: "看 AI Agent + 阿里云百炼 CLI + Skills 在真实场景中的落地：Qwen Code 编排、Live Translate 直播翻译、Awesome HappyHorse 视频生成 prompt 库、内容创作工作流等。"
+keywords: "阿里云百炼案例,AI Agent 案例,Qwen Code,LiveTranslate 直播翻译,Awesome HappyHorse,AI 应用案例,Showcase"
 ---
 
 # 用户案例 Showcase
