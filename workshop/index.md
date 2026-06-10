@@ -204,6 +204,29 @@ pnpm --filter @maidan/web exec next dev --turbopack -p 3030
 
 ---
 
+## 提交你的作品
+
+跑通 Workshop 之后，把你的实践提交到社区，让更多人看到 —— 整个过程只要 3 步：
+
+**1. 点击提交入口** 👉 [新建 Issue（已预填模板）](https://github.com/modelstudioai/modelstudioai.github.io/issues/new?template=showcase.md&title=%E3%80%90%E6%A1%88%E4%BE%8B%E3%80%91)
+
+**2. 按模板填四个板块**
+
+| 板块 | 写什么 |
+|------|--------|
+| 我做了什么 | 简述你用了哪个 Skill，完成了什么任务 |
+| 使用的工具 | 例如：OpenWork + 阿里云百炼 CLI + canvas-design |
+| 效果展示 | 贴一张截图，或描述产出结果（截图可直接粘贴到编辑框） |
+| 踩坑记录（可选） | 遇到了什么问题？怎么解决的？ |
+
+**3. 点击「Submit new issue」提交**
+
+我们会把优秀的案例收录到 [Showcase 页面](https://modelstudioai.github.io/showcase/)。
+
+> 💡 **小贴士**：截图直接 Ctrl+V 粘贴即可；几句话 + 一张图就够；跑了多个 Skill 可以分别提交多个 issue。
+
+---
+
 ## 社区与资源
 
 - 阿里云百炼 CLI GitHub：[github.com/modelstudioai/cli](https://github.com/modelstudioai/cli)
