@@ -1,7 +1,9 @@
 ---
 layout: doc
-title: FAQ
+title: 常见问题 FAQ
 permalink: /faq/
+description: "阿里云百炼 CLI、OpenWork、Skills 常见问题汇总——安装失败、登录异常、API Key 配置、模型选型、计费规则、错误码排查全覆盖。"
+keywords: "百炼 FAQ,bailian-cli 常见问题,OpenWork 安装失败,API Key 配置,DashScope 错误码,模型计费,免费额度"
 ---
 
 # 常见问题
