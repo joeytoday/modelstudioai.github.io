@@ -2,6 +2,8 @@
 layout: doc
 title: 精选 Skills
 permalink: /skills/
+description: "精选 Agent Skills 集合——图文设计、视频制作、营销文案、代码开发、文档协作等可复用 AI 能力模块。一句话驱动完整工作流，社区共建持续扩展。"
+keywords: "Agent Skills,AI Skills,百炼 Skills,canvas-design,spark-video,marketing-writer,bailian-docs-llm-wiki,XHS 图文,AI 工作流,Skill 市场"
 ---
 
 # 精选 Skills
