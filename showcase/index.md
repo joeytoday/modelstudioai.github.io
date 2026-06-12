@@ -14,6 +14,22 @@ keywords: "阿里云百炼案例,AI Agent 案例,百炼CLI,OpenWork,Showcase,社
 
 ---
 
+## 儿童趣味动物视频生成：从一个词到 HappyHorse 样片
+
+**作者**：[@boblank](https://github.com/boblank) · 2026-06-11
+
+做了一个适合线下活动演示的儿童趣味动物视频生成 workflow：用户只需要输入一个动物词（如「狐獴」），Agent 先用 qwen3.7-max 规划一个简单、阳光、儿童友好的小故事和三拍视频脚本，再通过 `happyhorse-prompt-studio` 收敛成 T2V prompt，最后调用 `bl video generate --model happyhorse-1.0-t2v` 生成 5 秒动画样片。
+
+**完整链路**：输入动物词 → 儿童内容安全边界 → qwen3.7-max 生成脚本 → happyhorse-prompt-studio 收敛 prompt → `bl video generate` → ffprobe/ffmpeg QA → 成片
+
+**产出**：5 秒 / 1920×1080 / H.264 / 温暖童话动画风（圆润小狐獴抱红苹果）
+
+**工具**：百炼 CLI `bl video generate` + bailian-cli / bailian-docs-llm-wiki / happyhorse-prompt-studio Skills + ffmpeg
+
+> [查看原始 PR →](https://github.com/modelstudioai/modelstudioai.github.io/pull/8)
+
+---
+
 ## AI 竞技场：跨厂商模型对比平台
 
 **作者**：[@Unicosmos](https://github.com/Unicosmos) · 2026-06-11
