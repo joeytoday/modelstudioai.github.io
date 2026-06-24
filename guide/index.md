@@ -123,14 +123,16 @@ bl --version
 
 ### 方式 B：在主流 AI Agent 框架中使用
 
-无需额外配置——只要 Agent 能执行 shell，就能调用 `bl`。
+只要 Agent 装了 `bailian-cli`（按「方式 A」一句话装好），就能在对话里**直接说人话**调用百炼能力——无需关心底层命令。
 
-| 框架 | 调用方式 |
-|------|----------|
-| Cursor | 终端 / Composer 调用 `bl ...` 命令 |
-| Qwen Code | 作为结构化工具调用，参考 [showcase](/showcase/) |
-| Claude Desktop / Claude Code | 直接 shell 调用即可（在 `claude_desktop_config.json` 里把 `command` 设为 `bl`）。若要让 Agent 调用百炼平台托管的 MCP 服务（如官方天气、日历等），用 `bl mcp list` / `bl mcp call` |
-| Windsurf / Cline / Trae | 同上，支持任意能跑 shell 的 Agent |
+| 框架 | 在它里面怎么用（直接对话） |
+|------|---------|
+| **Cursor** | 在 Composer 里说：「**帮我用百炼生成一张赛博朋克风格的猫**」。Cursor 会自动调度百炼并把生成的图片路径贴回对话 |
+| **Qwen Code** | 直接对它提需求，Qwen Code 会把任务派给百炼完成。完整示例见 [Showcase](/showcase/) |
+| **Claude Desktop / Claude Code** | 对 Claude 说：「**用百炼帮我做一段 30 秒的产品介绍视频，卖点是 XXX**」。Claude 会自主跑通整条链路 |
+| **Windsurf / Cline / Trae** | 同样——在对话框里说需求，Agent 自主完成；不需要你打任何命令 |
+
+> 💡 **想接入百炼托管的官方 MCP 服务**（如官方天气、日历、知识库等）？查看 [`/cli/` 的「MCP 集成」一节](/cli/#核心能力)，里面有专门的接入指引。
 
 ### 方式 C：使用 OpenWork（开源桌面 Agent）
 
