@@ -10,3 +10,4 @@ plugins: []
 # 阿里云百炼 UTM 链接（全站统一引用）
 bailian_cli_url: "https://bailian.console.aliyun.com/cli?source_channel=cli_github&"
 bailian_apikey_url: "https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key"
+happyhorse_t2v_url: "https://bailian.console.aliyun.com/cn-beijing?tab=demohouse&source_channel=hh_github#/experience/t2v"

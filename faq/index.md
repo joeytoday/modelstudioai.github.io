@@ -8,7 +8,7 @@ keywords: "百炼 FAQ,bailian-cli 常见问题,OpenWork 安装失败,API Key 配
 
 # 常见问题
 
-> 本页持续更新。遇到新问题？[提 Issue](https://github.com/ModelStudioAI/modelstudioai.github.io/issues) 或直接 [编辑本页](https://github.com/ModelStudioAI/modelstudioai.github.io/edit/main/faq/index.md)。
+> 本页持续更新。遇到新问题？[提 Issue](https://github.com/modelstudioai/modelstudioai.github.io/issues) 或直接 [编辑本页](https://github.com/modelstudioai/modelstudioai.github.io/edit/main/faq/index.md)。
 
 ---
 
@@ -32,7 +32,7 @@ OpenWork 是桌面端应用，已内置阿里云百炼 CLI。你可以选择用 
 
 ### 如何获取 API Key？
 
-[前往阿里云百炼平台获取 →](https://bailian.console.aliyun.com/cn-beijing/?source_channel=key_github&tab=app#/api-key)
+[前往阿里云百炼平台获取 →]({{ site.bailian_apikey_url }})
 
 ### API Key 配置后不生效？
 
@@ -70,5 +70,5 @@ OpenWork 是桌面端应用，已内置阿里云百炼 CLI。你可以选择用 
 
 ### 如何反馈问题？
 
-- [GitHub Issues](https://github.com/ModelStudioAI/modelstudioai.github.io/issues)
+- [GitHub Issues](https://github.com/modelstudioai/modelstudioai.github.io/issues)
 - 加入社群（微信群二维码见各活动页面）

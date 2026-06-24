@@ -94,6 +94,13 @@ bl text chat --message "你好"
 | 模型推荐 | `bl advisor recommend` | 描述场景获取最优模型建议、模型对比 |
 | 用量查询 | `bl usage free` | 查询免费额度使用情况 |
 
+> ℹ️ **`bl mcp` 不做什么**
+>
+> `bl mcp` 是 **MCP 客户端**——它让你调用百炼平台已经发布的 MCP 服务。
+> 它**不会**把 `bl` 本身暴露成 MCP server。如果你想让 Claude Desktop / Cursor 等通过 MCP 协议接入 `bl`，
+> 目前推荐做法是直接在 Agent 配置里把 `bl` 当作 shell 命令调用（例如 `claude_desktop_config.json` 中
+> `"command": "bl"`）。原生 `bl mcp serve` 模式在 roadmap 中。
+
 > 每个 URL 参数都接受本地路径，自动上传到免费临时存储（48 小时有效期）。
 
 ---
