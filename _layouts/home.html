@@ -131,6 +131,22 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.5; backg
 .step-card a { color: var(--link); text-decoration: none; font-size: 13px; font-weight: 500; }
 .step-card a:hover { text-decoration: underline; }
 
+/* Playbook entry */
+.playbook-entry { padding: 56px 24px 24px; background: var(--canvas-soft, #fafafa); }
+.playbook-entry-inner { max-width: 1100px; margin: 0 auto; }
+.playbook-entry h2 { text-align: center; font-size: 28px; font-weight: 600; letter-spacing: -1px; margin: 0 0 10px; }
+.playbook-entry .section-sub { text-align: center; font-size: 14px; color: var(--body); margin: 0 0 32px; line-height: 1.6; }
+.playbook-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+@media (max-width: 768px) { .playbook-grid { grid-template-columns: repeat(2, 1fr); } }
+.pb-card { display: block; padding: 18px 16px; background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: var(--rounded-lg); text-decoration: none; color: inherit; transition: background 0.2s, box-shadow 0.2s, transform 0.2s; }
+.pb-card:hover { background: var(--bg-card-hover); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); text-decoration: none; }
+.pb-emoji { font-size: 26px; display: block; margin-bottom: 8px; }
+.pb-card h3 { font-size: 14px; font-weight: 500; margin: 0 0 4px; letter-spacing: -0.2px; color: var(--ink); }
+.pb-card p { font-size: 12px; color: var(--mute); margin: 0; line-height: 1.4; }
+.playbook-cta-wrap { text-align: center; }
+.playbook-cta { display: inline-block; padding: 10px 22px; background: var(--ink); color: #fff; border-radius: 100px; text-decoration: none; font-size: 13px; font-weight: 500; transition: opacity 0.15s; }
+.playbook-cta:hover { opacity: 0.85; text-decoration: none; }
+
 /* Ecosystem */
 .ecosystem { padding: 64px 24px; background: var(--canvas); }
 .ecosystem-inner { max-width: 1100px; margin: 0 auto; }
@@ -219,6 +235,24 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.5; backg
       <p>从 GitHub 加载精选 Skill，一句话驱动 AI 完成完整工作流。</p>
       <a href="/skills/">查看精选 Skills &rarr;</a>
     </div>
+  </div>
+</section>
+
+<section class="playbook-entry">
+  <div class="playbook-entry-inner">
+    <h2>不知道从哪开始？按岗位找你的能力样板</h2>
+    <p class="section-sub">8 个岗位，每个都有「想清楚 &rarr; 动手做 &rarr; 检查对不对」的完整回路 + 30 分钟最小流程，复制即用。</p>
+    <div class="playbook-grid">
+      <a class="pb-card" href="/playbook/#kw"><span class="pb-emoji">📚</span><h3>知识工作者</h3><p>写报告 &middot; 做调研 &middot; 整理资料</p></a>
+      <a class="pb-card" href="/playbook/#dz"><span class="pb-emoji">🎨</span><h3>设计师</h3><p>出图 &middot; 出视频 &middot; 做海报</p></a>
+      <a class="pb-card" href="/playbook/#dev"><span class="pb-emoji">💻</span><h3>AI 开发</h3><p>接 API &middot; 搭 Agent &middot; 做产品</p></a>
+      <a class="pb-card" href="/playbook/#fin"><span class="pb-emoji">📈</span><h3>投研咨询</h3><p>拉数据 &middot; 做估值 &middot; 写研报</p></a>
+      <a class="pb-card" href="/playbook/#cs"><span class="pb-emoji">📞</span><h3>客服运营</h3><p>回复用户 &middot; 处理工单</p></a>
+      <a class="pb-card" href="/playbook/#mkt"><span class="pb-emoji">📣</span><h3>内容营销</h3><p>写文章 &middot; 出配图 &middot; 做短视频</p></a>
+      <a class="pb-card" href="/playbook/#ops"><span class="pb-emoji">⚙️</span><h3>AI Ops</h3><p>用量 &middot; 配额 &middot; SLA</p></a>
+      <a class="pb-card" href="/playbook/#legal"><span class="pb-emoji">⚖️</span><h3>法务合规</h3><p>条款比对 &middot; 出意见</p></a>
+    </div>
+    <div class="playbook-cta-wrap"><a class="playbook-cta" href="/playbook/">看完整 8 岗位样板 &rarr;</a></div>
   </div>
 </section>
 
