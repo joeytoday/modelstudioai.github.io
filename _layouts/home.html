@@ -134,6 +134,10 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.5; backg
 /* Playbook entry */
 .playbook-entry { padding: 56px 24px 24px; background: var(--canvas-soft, #fafafa); }
 .playbook-entry-inner { max-width: 1100px; margin: 0 auto; }
+.playbook-headline{display:block;text-decoration:none;color:inherit;transition:opacity .15s ease}
+.playbook-headline:hover{opacity:.86}
+.playbook-headline:hover .playbook-headline-arrow{transform:translateX(4px)}
+.playbook-headline-arrow{display:inline-block;transition:transform .2s ease;color:var(--link)}
 .playbook-entry h2 { text-align: center; font-size: 28px; font-weight: 600; letter-spacing: -1px; margin: 0 0 10px; }
 .playbook-entry .section-sub { text-align: center; font-size: 14px; color: var(--body); margin: 0 0 32px; line-height: 1.6; }
 .playbook-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
@@ -240,8 +244,10 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.5; backg
 
 <section class="playbook-entry">
   <div class="playbook-entry-inner">
-    <h2>不知道从哪开始？按岗位找你的能力样板</h2>
-    <p class="section-sub">8 个岗位，每个都有「想清楚 &rarr; 动手做 &rarr; 检查对不对」的完整回路 + 30 分钟最小流程，复制即用。</p>
+    <a class="playbook-headline" href="/playbook/">
+      <h2>不知道从哪开始？按岗位找你的能力样板 <span class="playbook-headline-arrow">&rarr;</span></h2>
+      <p class="section-sub">8 个岗位，每个都有「想清楚 &rarr; 动手做 &rarr; 检查对不对」的完整回路 + 30 分钟最小流程，复制即用。</p>
+    </a>
     <div class="playbook-grid">
       <a class="pb-card" href="/playbook/#kw"><span class="pb-emoji">📚</span><h3>知识工作者</h3><p>写报告 &middot; 做调研 &middot; 整理资料</p></a>
       <a class="pb-card" href="/playbook/#dz"><span class="pb-emoji">🎨</span><h3>设计师</h3><p>出图 &middot; 出视频 &middot; 做海报</p></a>
