@@ -14,6 +14,117 @@ keywords: "阿里云百炼案例,AI Agent 案例,百炼CLI,OpenWork,Showcase,社
 
 ---
 
+## 一言成铺（OneWord Store）：一句话跑通电商内容全链路
+
+**作者**：[@solareclipse0130](https://github.com/solareclipse0130) · 2026-06-28
+
+用一句自然语言指令跑通完整电商内容生产线：对 Claude Code 说「给『白桃味0糖气泡水』做一套电商内容」，由它编排百炼 CLI，自动产出商品文案 → 商品主图 → 促销海报 → 口播配音 → 9:16 短视频成片。核心是把 6 步链路固化为 `make-ecom.sh` 脚本——换产品名即可复用。
+
+**产出**：5 类交付物齐全（文案 JSON / 4K 白底主图 / 中文大字促销海报 / CosyVoice 配音 / 竖屏 5 分镜短视频）
+
+**工具**：百炼 CLI（`bl text chat` / `bl image generate` / `bl image edit` / `bl speech synthesize` / `bl video generate`）+ Claude Code 编排 + ffmpeg 合成 + Skills: bailian-cli / video-storyboard / video-marketing / happyhorse-prompt-studio / bailian-model-recommend
+
+> [查看原始 Issue →](https://github.com/modelstudioai/modelstudioai.github.io/issues/26)
+
+---
+
+## PetMarketer AI：宠物品牌 AI 营销素材工厂
+
+**作者**：[@jingwenliu123456-coder](https://github.com/jingwenliu123456-coder) · 2026-06-28
+
+基于百炼 CLI 搭建 AI Native 自动化工作流，专为宠物电商品牌设计。输入一个产品名（如"狗包"），3 分钟内串联 5 个 AI 任务，输出全套社交媒体营销素材：KOC 合作策略 → 拍摄 Brief → 15 秒爆款脚本 → AI 产品场景图 → 投放素材包。将传统 3 天 / 1000 元+ 的流程压缩到 3 分钟、几乎零成本。
+
+**工具**：百炼 CLI（`bl text chat` / `bl image generate` / `bl video generate`）+ Shell 脚本自动化
+
+![PetMarketer AI](https://github.com/user-attachments/assets/ed91a579-cc81-4712-8e60-ba302948e6e1)
+
+> [查看原始 Issue →](https://github.com/modelstudioai/modelstudioai.github.io/issues/24)
+
+---
+
+## 镜准（JINGZHUN）：商品视觉质检与自动改稿
+
+**作者**：[@XiaoyangBi](https://github.com/XiaoyangBi) · 2026-06-28
+
+面向电商商品主图和短视频素材的视觉质检与自动改稿应用。三步工作流：上传素材 → 视觉质检（综合评分 + 问题列表 + 证据） → 自动改稿（重制主图 / 改稿脚本 / 字幕精简 / 分镜）。支持淘宝、天猫、京东、抖音、小红书、拼多多等平台规则适配。
+
+**工具**：TRAE + 百炼 CLI（`blVisionDescribe` / `blChatJSON` / `blImageEdit`）+ qwen3-vl-plus / qwen3.7-max / qwen-image-2.0 + Next.js
+
+![镜准截图](https://github.com/user-attachments/assets/9f3277d9-9c12-4ff8-99fc-7a75e82dd7f3)
+
+> [查看原始 Issue →](https://github.com/modelstudioai/modelstudioai.github.io/issues/23)
+
+---
+
+## 海外社媒配图生成工作流：Instagram 生活场景产品图
+
+**作者**：[@Celestebz](https://github.com/Celestebz) · 2026-06-28
+
+用一条自然语言需求把产品图改造成 Instagram 生活方式场景图，同时生成英文 caption、hashtags、alt text 和发布建议。独创三层 prompt 架构：事实层（锁定主体特征不跑偏）+ 画面层（定义生活空间、道具、光线）+ 风格层（控制 Instagram 原生审美和低广告感），把电商白底棚拍变成"卧室练习角"生活内容。
+
+**工具**：OpenWork / Codex + 百炼 CLI（`bl` + qwen-plus + qwen-image-2.0）+ 自定义脚本 `social-visual-pack`
+
+![海外社媒配图](https://github.com/user-attachments/assets/83d6883a-378d-4ba5-8937-8bb47d8b3d12)
+
+> [查看原始 Issue →](https://github.com/modelstudioai/modelstudioai.github.io/issues/22)
+
+---
+
+## GEO Agent：从审计到内容创建的一键生成工作流
+
+**作者**：[@SevenAILab](https://github.com/SevenAILab) · 2026-06-28
+
+用百炼 CLI 串联两个自建 Skill（geo-audit + geo-content-forge），对 sevenailab.com 完成完整的 GEO（生成式引擎优化）审计 + 内容创作 + AI 配图全流程：自动抓取 6 个页面 → 分析 robots.txt / sitemap / llms.txt → 4 类 AI 可见度基线测试（AIVO 评分 52/100）→ 基于缺口自动创作 GEO 优化博客 → 17 项质量门全部通过 → 6 章节配图 → 两份可展示 HTML。
+
+**工具**：百炼 CLI + 自建 Skill（geo-audit / geo-content-forge）+ 百炼文生图 + Claude Code
+
+> [查看原始 Issue →](https://github.com/modelstudioai/modelstudioai.github.io/issues/20)
+
+---
+
+## 电商产品出图 Skill：从需求到生图全流程自动化
+
+**作者**：[@streetlightstartupnotes](https://github.com/streetlightstartupnotes) · 2026-06-28
+
+用 Clacky AI Agent 自动创建「电商产品出图」Skill，实现需求追问 → 素材分析 → Prompt 工程 → 百炼 CLI 生图 → 迭代优化全流程。内置 7 层质量基底词 + 8 大品类风格词库 + 6 大平台规则适配；支持模糊反馈精准映射（"太假""不够高级"→ prompt 调整）；支持单图迭代和 5 图标准电商套图模式。
+
+**工具**：Clacky AI Agent + 百炼 CLI `bailian image generate --n 3 --watermark false --prompt-extend false` + ecommerce-image Skill
+
+> [查看原始 Issue →](https://github.com/modelstudioai/modelstudioai.github.io/issues/19)
+
+---
+
+## qwen-subtitle：视频字幕智能纠错 + 克隆原声多语言配音
+
+**作者**：[@oil-oil](https://github.com/oil-oil) · 2026-06-28
+
+给录屏/教程/讲解类视频做字幕智能纠错 + 多语言出海配音。核心洞察：录屏视频里正确的词往往就写在屏幕上，让 qwen-vl 按时间戳看帧读屏幕文字来纠正 ASR 错误（`Claude` 听成 `cloud`、`Codex` 听成 `class q`）——纯语音工具永远做不到。实测 7 分钟录屏 78 句，14 处修改中 13 处正确。
+
+**工具**：百炼 CLI 全程驱动 5 步（`bl speech recognize` → `bl text chat` + `bl vision describe` 看屏纠错 → 顺滑 → 翻译 → `bl speech synthesize` 克隆配音）
+
+**仓库**：[github.com/oil-oil/qwen_subtitle](https://github.com/oil-oil/qwen_subtitle)（MIT）
+
+![qwen-subtitle 预览](https://raw.githubusercontent.com/oil-oil/qwen_subtitle/main/assets/preview-multilang.png)
+
+> [查看原始 Issue →](https://github.com/modelstudioai/modelstudioai.github.io/issues/18)
+
+---
+
+## Curation Studio：为电商单品生成策展内容
+
+**作者**：[@DawnLck](https://github.com/DawnLck) · 2026-06-28
+
+用 Antigravity + 百炼 CLI 搭建顶级视觉品味的电商内容策展工坊。用户上传商品照片 + 简短说明 → Qwen-VL 提取主体特征 → 三个专业电商镜头 Prompt（全景意境 / 宏观特写 / 生活日常）并行生图 → HappyHorse 烘焙 5 秒光影运镜视频 → CosyVoice 朗读杂志解说文案 → React + Framer Motion 编排 Bento Grid 展示面板（3D 深度随动 + 发光打字机 + 分镜切换视差 + 沉浸式有声视频剧院弹窗）。
+
+**工具**：百炼 CLI（`bl vision describe` / `bl image generate` / `bl video generate` / `bl speech synthesize` / `bl text chat`）+ React + Tailwind CSS v4 + Framer Motion + Antigravity
+
+![Curation Studio](https://github.com/user-attachments/assets/d6f58f25-01e9-4464-803b-7697bd0ae0f9)
+
+> [查看原始 Issue →](https://github.com/modelstudioai/modelstudioai.github.io/issues/17)
+
+---
+
+
 ## 儿童趣味动物视频生成：从一个词到 HappyHorse 样片
 
 **作者**：[@boblank](https://github.com/boblank) · 2026-06-11
