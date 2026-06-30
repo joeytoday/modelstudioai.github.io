@@ -117,10 +117,8 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
   <div class="nav-inner">
     <a href="/" class="nav-logo">ModelStudio for Developers</a>
     <div class="nav-links">
-      <a href="/blog/">Blog</a>
       <a href="/playbook/">岗位能力样板</a>
-      <a href="/skills/">Skills</a>
-      <a href="/workshop/">Workshop</a>
+      <a href="/blog/">Blog</a>
       <a href="/showcase/">案例</a>
       <a href="https://github.com/modelstudioai" target="_blank">GitHub</a>
       <a href="{{ site.bailian_apikey_url }}" class="nav-cta" target="_blank">获取 API Key</a>
@@ -136,17 +134,18 @@ body { font-family: var(--font-sans); color: var(--ink); line-height: 1.6; backg
       <a href="/cli/" {% if page.url == '/cli/' %}class="active"{% endif %}>阿里云百炼 CLI</a>
       <a href="/openwork/" {% if page.url == '/openwork/' %}class="active"{% endif %}>OpenWork</a>
       <a href="/skills/" {% if page.url == '/skills/' %}class="active"{% endif %}>Agent Skills</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">活动</div>
-      <a href="/workshop/" {% if page.url == '/workshop/' %}class="active"{% endif %}>Workshop</a>
-      <a href="/showcase/" {% if page.url == '/showcase/' %}class="active"{% endif %}>用户案例</a>
+      <a href="/playbook/" {% if page.url == '/playbook/' %}class="active"{% endif %}>岗位能力样板</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">Blog</div>
       <a href="/blog/" {% if page.url == '/blog/' %}class="active"{% endif %}>全部文章</a>
       <a href="/blog/qwencode-bailian-ai-marketing/" {% if page.url == '/blog/qwencode-bailian-ai-marketing/' %}class="active"{% endif %}>电商营销全流程</a>
       <a href="/blog/qwencode-mpcover-skill-guide/" {% if page.url == '/blog/qwencode-mpcover-skill-guide/' %}class="active"{% endif %}>公众号封面生成</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">案例</div>
+      <a href="/showcase/" {% if page.url == '/showcase/' %}class="active"{% endif %}>用户案例</a>
+      <a href="/workshop/" {% if page.url == '/workshop/' %}class="active"{% endif %}>Workshop</a>
     </div>
     <div class="sidebar-section">
       <div class="sidebar-title">帮助</div>
